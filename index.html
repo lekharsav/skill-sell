@@ -13,14 +13,14 @@
        Theme colors (Electric Blue + Neon Purple)
        ========================= */
     :root{
-      --bg:#0b1020;
+      --bg:#ea4a4a;
       --card:#0f1724;
       --muted:#9aa3c3;
-      --glass: rgba(255,255,255,0.05);
+      --glass: rgba(209, 40, 40, 0.05);
 
-      --accent-1: #635BFF;   /* electric purple */
+      --accent-1: #f3df6eff;   /* electric purple */
       --accent-2: #00D4FF;   /* cyan */
-      --accent-3: #7C4DFF;   /* neon purple */
+      --accent-3: #feffa7ff;   /* neon purple */
       --cta: linear-gradient(135deg,var(--accent-2),var(--accent-1));
       --white: #ffffff;
       --shadow: 0 24px 46px rgba(2,6,23,0.55);
@@ -32,7 +32,7 @@
        Base reset & utilities
        ========================= */
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:var(--white);background:linear-gradient(180deg,var(--bg) 0%, #071022 100%);-webkit-font-smoothing:antialiased;}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:#ffe324;background:linear-gradient(180deg,var(--bg) 0%,#c9921bd6 100%);-webkit-font-smoothing:antialiased;}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
 
@@ -55,7 +55,7 @@
     nav.primary a:hover{background:rgba(255,255,255,0.03)}
     .nav-cta{display:flex;gap:12px;align-items:center}
     .btn-cta{padding:10px 18px;border-radius:28px;background:var(--cta);color:#021428;font-weight:800;box-shadow: 0 10px 30px rgba(0,212,255,0.12);border:none;cursor:pointer}
-    .ghost{padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:none;color:var(--muted);font-weight:600}
+    .ghost{padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:none;color:#ffffff;font-weight:600}
 
     /* =========================
        HERO
@@ -64,14 +64,14 @@
       display:grid;grid-template-columns:1fr 520px;gap:40px;align-items:center;padding:56px 0 40px;position:relative;overflow:visible;
     }
     .hero-left{padding-right:20px}
-    .eyebrow{display:inline-block;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:700;margin-bottom:16px}
+    .eyebrow{display:inline-block;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));padding:8px 12px;border-radius:999px;color:#ffffff;font-weight:700;margin-bottom:16px}
     .hero h2{font-family:Poppins, sans-serif;font-size:48px;margin:0 0 12px;line-height:1.02;color:var(--white);letter-spacing:-0.6px}
     .hero h2 .highlight{background:linear-gradient(90deg,var(--accent-2),var(--accent-1));padding:6px 12px;border-radius:10px;color:#031021}
-    .hero p.lead{color:var(--muted);font-size:16px;margin:0 0 20px;max-width:680px}
+    .hero p.lead{color:#ffe700;font-size:16px;margin:0 0 20px;max-width:680px}
 
     .hero-ctas{display:flex;gap:18px;align-items:center}
     .btn-primary{background:var(--cta);padding:14px 20px;border-radius:28px;color:#021428;font-weight:800;border:none;cursor:pointer;box-shadow:var(--shadow);transform:translateZ(0)}
-    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px 14px;border-radius:18px;color:var(--muted);font-weight:700}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px 14px;border-radius:18px;color:#ffffff;font-weight:700}
 
     /* floating micro CTA */
     .kpi-pill{display:inline-flex;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.03);font-weight:700;color:var(--accent-2);}
@@ -118,7 +118,7 @@
     }
     .track-svg{width:100%;height:86px;display:block}
     .track-steps{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-top:8px}
-    .step{flex:1;text-align:center;color:var(--muted);font-weight:700;font-size:13px;opacity:0.95}
+    .step{flex:1;text-align:center;color:#ffffff;font-weight:700;font-size:13px;opacity:0.95}
     .step.active{color:var(--accent-1);transform:scale(1.03)}
 
     /* moving dot */
@@ -128,25 +128,42 @@
        SECTIONS - banded & unique
        ========================= */
     section.band{
-      padding:64px 0 40px;position:relative;background:linear-gradient(180deg, rgba(124,77,255,0.08), transparent 40%);
+      padding:6px 0 40px;position:relative;background:linear-gradient(180deg, rgba(124,77,255,0.08), transparent 40%);
       margin-top:12px;border-top:1px solid rgba(255,255,255,0.02)
     }
-    .band .badge{display:inline-block;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));padding:8px 16px;border-radius:18px;color:#021428;font-weight:800}
+    .band .badge{display:inline-block;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));padding:8px 16px;border-radius:18px;color:#021428;font-weight:800;margin-top:-35px;}
     .band h3{font-size:34px;margin:18px 0 6px;font-family:Poppins}
     .logos{display:flex;gap:24px;align-items:center;justify-content:center;margin-top:26px}
-    .logos .circle{width:120px;height:120px;border-radius:999px;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));display:grid;place-items:center;border:1px solid rgba(255,255,255,0.03)}
+.logos .circle{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  overflow:hidden; /* REQUIRED */
+  background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,0.03);
+}
+.logos .circle img{
+  width:100%;
+  height:100%;
+  object-fit:cover; /* REQUIRED */
+  display:block;
+}
+
 
     /* =========================
        COURSES GRID (cards)
        ========================= */
-    .courses{padding:64px 0}
+    .courses{padding:6px 0}
     .courses .tabs{display:flex;gap:12px;justify-content:center;margin-bottom:24px}
-    .courses .tab{padding:10px 14px;border-radius:999px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-weight:700;cursor:pointer}
-    .courses .tab.active{background:var(--glass-soft);color:var(--white);border:1px solid rgba(124,77,255,0.12);box-shadow:0 8px 24px rgba(99,91,255,0.06)}
+    .courses .tab{padding:10px 14px;border-radius:999px;background:rgba(0, 0, 0, 0.3);border:1px solid rgba(255,255,255,0.03);color:#ffffff;font-weight:700;cursor:pointer}
+    .courses .tab.active{background:#fffb4e45;color:var(--white);border:1px solid rgba(124,77,255,0.12);box-shadow:0 8px 24px rgba(99,91,255,0.06)}
 
     .course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
     .course-card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      background:linear-gradient(180deg, rgb(252 21 21), rgb(245 159 159 / 39%));
       border:1px solid var(--glass-border);border-radius:16px;padding:14px;overflow:hidden;position:relative;
       transition: transform .35s cubic-bezier(.2,.9,.2,1), box-shadow .35s;cursor:pointer;
     }
@@ -164,23 +181,23 @@
     /* =========================
         TESTIMONIALS
        ========================= */
-    .testimonials{padding:64px 0;background:linear-gradient(180deg, rgba(10,16,32,0.4), transparent 30%)}
+    .testimonials{padding:6px 0;}
     .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .testimonial{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);transition:transform .25s}
-    .testimonial:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(4,8,20,0.6)}
+    .testimonial:hover{transform:translateY(-6px);}
 
     /* =========================
        FAQ
        ========================= */
-    .faq-wrap{padding:64px 0;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start}
+    .faq-wrap{padding:6px 0;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start}
     .faq .acc{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.03);margin-bottom:12px}
     .acc button{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:none;color:var(--white);font-weight:800;padding:10px 0;cursor:pointer}
-    .acc .answer{color:var(--muted);padding-top:8px;display:none}
+    .acc .answer{color:#ffffff;padding-top:8px;display:none}
 
     /* =========================
        Footer
        ========================= */
-    footer{padding:32px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
+    footer{padding:32px 0;color:#ffffff;border-top:1px solid rgba(255,255,255,0.02)}
 
     /* =========================
        Animations (hyper animated)
@@ -230,6 +247,215 @@
       .device-card{width:300px;height:380px}
     }
 
+   /* =========================
+   PROFILE ICON (Nav)
+   ========================= */
+.profile-btn{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,0.08);
+  background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  color:var(--white);
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+.profile-btn:hover{
+  box-shadow:0 0 0 3px rgba(0,212,255,0.25);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   AUTH MODAL OVERLAY
+   ========================= */
+.auth-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(2,6,23,0.72);
+  backdrop-filter:blur(6px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:100;
+}
+.auth-overlay.active{
+  display:flex;
+}
+
+/* =========================
+   AUTH CARD
+   ========================= */
+.auth-card{
+  width:360px;
+  background:linear-gradient(180deg,#071226, rgba(99,91,255,0.08));
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:18px;
+  padding:28px;
+  text-align:center;
+  box-shadow:0 40px 80px rgba(0,0,0,0.7);
+}
+
+.auth-card h3{
+  margin:0 0 6px;
+  font-family:Poppins;
+  font-size:22px;
+}
+
+.auth-card p{
+  color:#ffffff;
+  font-size:14px;
+  margin-bottom:22px;
+}
+
+/* =========================
+   LOGIN / SIGNUP BUTTONS
+   ========================= */
+.auth-main{
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  font-weight:800;
+  border:none;
+  cursor:pointer;
+  margin-bottom:12px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.auth-main.login{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.12);
+  color:var(--white);
+}
+
+.auth-main.signup{
+  background:var(--cta);
+  color:#021428;
+}
+
+.auth-main:hover{
+  transform: translateY(-2px);
+  box-shadow:0 12px 28px rgba(0,0,0,0.45);
+}
+
+/* =========================
+   DIVIDER
+   ========================= */
+.divider{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:20px 0;
+  color:#ffffff;
+  font-size:12px;
+  font-weight:700;
+}
+.divider::before,
+.divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:rgba(255,255,255,0.08);
+}
+
+/* =========================
+   SOCIAL LOGIN BUTTONS
+   ========================= */
+.auth-social{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  font-weight:800;
+  border:none;
+  cursor:pointer;
+  margin-bottom:10px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.auth-social.google{
+  background:linear-gradient(90deg,var(--accent-2),var(--accent-1));
+  color:#021428;
+}
+
+.auth-social.facebook{
+  background:#1877f2;
+  color:#fff;
+}
+
+.auth-social.twitter{
+  background:#000;
+  color:#fff;
+}
+
+.auth-social:hover{
+  transform: translateY(-2px);
+  box-shadow:0 10px 24px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   FORGOT PASSWORD
+   ========================= */
+.forgot{
+  display:block;
+  margin-top:12px;
+  font-size:13px;
+  font-weight:700;
+  color:var(--accent-2);
+  text-decoration:none;
+}
+.forgot:hover{
+  text-decoration:underline;
+}
+
+
+/* =========================
+   COURSES SECTION VISUAL FIX
+   ========================= */
+
+.courses {
+  padding-top: 96px;     /* more breathing room at top */
+  padding-bottom: 72px;
+}
+
+.courses > .container > div:first-child {
+  margin-bottom: 36px;  /* separates heading from tabs */
+}
+
+.courses h3 {
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.courses p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Tabs spacing improvement */
+.courses .tabs {
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
+/* Optional subtle divider effect */
+.courses .tabs::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  margin: 0 auto 20px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-2),
+    transparent
+  );
+  opacity: 0.6;
+}
+
+
     /* small utility for hidden */
     .visually-hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
   </style>
@@ -250,7 +476,7 @@
         <div class="logo-mark" aria-hidden="true">AIM</div>
         <div class="brand">
           <h1 style="margin:0;font-size:16px">AIM</h1>
-          <div style="font-size:12px;color:var(--muted);margin-top:2px;font-weight:700">Learn. Launch. Lead.</div>
+          <div style="font-size:12px;color:#ffffff;margin-top:2px;font-weight:700">Learn. Launch. Lead.</div>
         </div>
       </div>
 
@@ -262,7 +488,16 @@
       </nav>
 
       <div class="nav-cta">
-        <button class="ghost">Sign in</button>
+        <button class="profile-btn" id="profileBtn" aria-label="Account">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+    <path d="M12 12c2.761 0 5-2.462 5-5.5S14.761 1 12 1 7 3.462 7 6.5 9.239 12 12 12Zm0 2c-4.418 0-8 2.239-8 5v2h16v-2c0-2.761-3.582-5-8-5Z"
+          fill="currentColor"/>
+  </svg>
+</button>
+
+
+
+
         <button class="btn-cta" onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">Browse Courses</button>
       </div>
     </div>
@@ -339,17 +574,42 @@
     </section>
   </main>
 
+  <div class="auth-overlay" id="authOverlay">
+  <div class="auth-card">
+
+    <h3>Account Access</h3>
+    <p>Login or create a new account to continue</p>
+
+    <!-- Primary actions -->
+    <button class="auth-main login">Login</button>
+    <button class="auth-main signup">Sign Up</button>
+
+    <div class="divider">
+      <span>or continue with</span>
+    </div>
+
+    <!-- Social login -->
+    <button class="auth-social google">Google</button>
+    <button class="auth-social facebook">Facebook</button>
+    <button class="auth-social twitter">X</button>
+
+    <a href="#" class="forgot">Forgot password?</a>
+
+  </div>
+</div>
+
+
   <!-- ACHIEVEMENTS BAND -->
   <section class="band">
-    <div class="container" style="text-align:center">
+    <div class="container" style="text-align  :center">
       <div class="badge">Our Reach</div>
       <h3>Trusted by 32,000+ learners across India</h3>
-      <p style="color:var(--muted);max-width:840px;margin:10px auto">AIM helps working professionals prepare with bite-sized lessons, live doubt sessions and placement-focused projects. Our graduates land promotions and jobs in government and private sectors.</p>
+      <p style="color:#ffffff;max-width:840px;margin:10px auto;font-size: large;">AIM helps working professionals prepare with bite-sized lessons, live doubt sessions and placement-focused projects. Our graduates land promotions and jobs in government and private sectors.</p>
 
       <div class="logos" aria-hidden="true">
-        <div class="circle"><img src="https://via.placeholder.com/80x80?text=Gov" alt=""></div>
-        <div class="circle"><img src="https://via.placeholder.com/80x80?text=DPIT" alt=""></div>
-        <div class="circle"><img src="https://via.placeholder.com/80x80?text=AIM" alt=""></div>
+        <div class="circle"><img src="teach1.png" alt=""></div>
+        <div class="circle"><img src="teach2.svg" alt=""></div>
+        <div class="circle"><img src="teach3.svg" alt=""></div>
       </div>
     </div>
   </section>
@@ -362,13 +622,13 @@
 
       <div style="display:flex;gap:26px;justify-content:center;align-items:center;margin-top:26px;flex-wrap:wrap">
         <div class="avatar" style="width:200px;height:200px;border-radius:50%;border:12px solid var(--accent-1);overflow:hidden;box-shadow:0 18px 40px rgba(2,8,20,0.7)">
-          <img src="https://images.unsplash.com/photo-1545996124-2b1f1b8d2d3a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="">
+          <img src="top1.webp" alt="">
         </div>
         <div class="avatar" style="width:200px;height:200px;border-radius:50%;border:12px solid var(--accent-2);overflow:hidden;box-shadow:0 18px 40px rgba(2,8,20,0.7)">
           <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="">
         </div>
         <div class="avatar" style="width:200px;height:200px;border-radius:50%;border:12px solid var(--accent-1);overflow:hidden;box-shadow:0 18px 40px rgba(2,8,20,0.7)">
-          <img src="https://images.unsplash.com/photo-1544005312-94e3f8e8e73b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="">
+          <img src="top3.webp" alt="">
         </div>
       </div>
     </div>
@@ -377,9 +637,10 @@
   <!-- COURSES -->
   <section id="courses" class="courses">
     <div class="container">
-      <div style="text-align:center">
-        <h3 style="font-family:Poppins;margin-bottom:8px">Crack Departmental & Tech Exams</h3>
-        <p style="color:var(--muted);max-width:880px;margin:0 auto">Hands-on courses, short focused modules and mentorship. Designed for working professionals who need practical outcomes fast.</p>
+      <div style="margin-top:20px" class="tabs">
+
+        <h3 style="font-family:Poppins; margin-top:-25px;">Crack Departmental & Tech Exams</h3>
+        <p style="color:#ffffff;max-width:880px;margin:0 auto">Hands-on courses, short focused modules and mentorship. Designed for working professionals who need practical outcomes fast.</p>
       </div>
 
       <div style="margin-top:20px" class="tabs" role="tablist" aria-label="course categories">
@@ -392,60 +653,60 @@
       <div class="course-grid" style="margin-top:24px">
         <!-- card 1 -->
         <article class="course-card" data-cat="full" tabindex="0" aria-label="Inspector course">
-          <div class="course-thumb"><img src="https://via.placeholder.com/800x450/021124/ffffff?text=Inspector+Course" alt=""></div>
+          <div class="course-thumb"><img src="police.png" alt=""></div>
           <h4 class="course-title">Inspector (Promotion) — Full Course</h4>
           <div class="course-meta">
-            <div style="color:var(--muted)">100+ lectures • Mocks</div>
+            <div style="color:#ffffff">100+ lectures • Mocks</div>
             <div class="price-badge">₹5,999</div>
           </div>
         </article>
 
         <!-- card 2 -->
         <article class="course-card" data-cat="full" tabindex="0">
-          <div class="course-thumb"><img src="https://via.placeholder.com/800x450/022235/ffffff?text=GDS+to+MTS" alt=""></div>
+          <div class="course-thumb"><img src="gds.jpg" alt=""></div>
           <h4 class="course-title">GDS → MTS • Transition Pack</h4>
           <div class="course-meta">
-            <div style="color:var(--muted)">Mini projects • 30 videos</div>
+            <div style="color:#ffffff">Mini projects • 30 videos</div>
             <div class="price-badge">₹1,299</div>
           </div>
         </article>
 
         <!-- card 3 -->
         <article class="course-card" data-cat="combo" tabindex="0">
-          <div class="course-thumb"><img src="https://via.placeholder.com/800x450/022234/ffffff?text=Postman+and+MailGuard" alt=""></div>
+          <div class="course-thumb"><img src="pos.jpg" alt=""></div>
           <h4 class="course-title">Postman & Mail Guard — Combo</h4>
           <div class="course-meta">
-            <div style="color:var(--muted)">Mocks • Notes • Live Doubt</div>
+            <div style="color:#ffffff">Mocks • Notes • Live Doubt</div>
             <div class="price-badge">₹1,399</div>
           </div>
         </article>
 
         <!-- card 4 -->
         <article class="course-card" data-cat="mock" tabindex="0">
-          <div class="course-thumb"><img src="https://via.placeholder.com/800x450/033244/ffffff?text=Mock+Tests" alt=""></div>
+          <div class="course-thumb"><img src="poo.jpg" alt=""></div>
           <h4 class="course-title">Mock Tests — Practice Series</h4>
           <div class="course-meta">
-            <div style="color:var(--muted)">Timed mocks & analytics</div>
+            <div style="color:#ffffff">Timed mocks & analytics</div>
             <div class="price-badge">₹499</div>
           </div>
         </article>
 
         <!-- card 5 -->
         <article class="course-card" data-cat="full" tabindex="0">
-          <div class="course-thumb"><img src="https://via.placeholder.com/800x450/112244/ffffff?text=PA+and+SA" alt=""></div>
+          <div class="course-thumb"><img src="pasa.jpg" alt=""></div>
           <h4 class="course-title">PA & SA — Full Preparation</h4>
           <div class="course-meta">
-            <div style="color:var(--muted)">Video lectures & notes</div>
+            <div style="color:#ffffff">Video lectures & notes</div>
             <div class="price-badge">₹1,799</div>
           </div>
         </article>
 
         <!-- card 6 -->
         <article class="course-card" data-cat="combo" tabindex="0">
-          <div class="course-thumb"><img src="https://via.placeholder.com/800x450/102244/ffffff?text=COMBO+Pack" alt=""></div>
+          <div class="course-thumb"><img src="ss.png" alt=""></div>
           <h4 class="course-title">COMBO — Save 30%</h4>
           <div class="course-meta">
-            <div style="color:var(--muted)">All-in-one bundle</div>
+            <div style="color:#ffffff">All-in-one bundle</div>
             <div class="price-badge">₹6,999</div>
           </div>
         </article>
@@ -458,25 +719,25 @@
     <div class="container" style="text-align:center">
       <div class="badge" style="background:linear-gradient(90deg,var(--accent-2),var(--accent-1));display:inline-block;padding:8px 14px;border-radius:14px;color:#021428;font-weight:800">Why AIM</div>
       <h3 style="margin-top:12px">Master your path to promotion & growth</h3>
-      <p style="color:var(--muted);max-width:820px;margin:8px auto">Project-based learning, micro-lessons, mock interviews and placement assistance — tailored for job promotions and career change.</p>
+      <p style="color:#ffffff;max-width:820px;margin:8px auto">Project-based learning, micro-lessons, mock interviews and placement assistance — tailored for job promotions and career change.</p>
 
       <div style="display:flex;gap:20px;justify-content:center;margin-top:26px;flex-wrap:wrap">
-        <div style="width:260px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);">
+        <div style="width:260px;background:linear-gradient(180deg, rgb(251 209 102 / 83%), rgba(255, 255, 255, 0.01));padding:18px;border-radius:12px;border:1px solid rgba(249,0,0,49%%);">
           <div style="font-size:36px;margin-bottom:10px">🎯</div>
           <div style="font-weight:800">Targeted Curriculum</div>
-          <div style="color:var(--muted);margin-top:6px">Short modules focused on outcomes.</div>
+          <div style="color:#ffffff;margin-top:6px">Short modules focused on outcomes.</div>
         </div>
 
-        <div style="width:260px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);">
+        <div style="width:260px;background:linear-gradient(180deg, rgb(251 209 102 / 83%), rgba(255, 255, 255, 0.01));padding:18px;border-radius:12px;border:1px solid rgba(249,0,0,49%%);">
           <div style="font-size:36px;margin-bottom:10px">💡</div>
           <div style="font-weight:800">Live Doubt Sessions</div>
-          <div style="color:var(--muted);margin-top:6px">Weekly live Q&A and mentor support.</div>
+          <div style="color:#ffffff;margin-top:6px">Weekly live Q&A and mentor support.</div>
         </div>
 
-        <div style="width:260px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);">
+        <div style="width:260px;background:linear-gradient(180deg, rgb(251 209 102 / 83%), rgba(255, 255, 255, 0.01));padding:18px;border-radius:12px;border:1px solid rgba(249,0,0,49%%);">
           <div style="font-size:36px;margin-bottom:10px">📈</div>
           <div style="font-weight:800">Progress Analytics</div>
-          <div style="color:var(--muted);margin-top:6px">Track improvements with built-in analytics.</div>
+          <div style="color:#ffffff;margin-top:6px">Track improvements with built-in analytics.</div>
         </div>
       </div>
     </div>
@@ -496,7 +757,7 @@
             <img src="https://via.placeholder.com/64" style="width:64px;height:64px;border-radius:50%;border:3px solid rgba(255,255,255,0.02)" alt="">
             <div><div style="font-weight:800">Sourabh Shukla</div><div style="color:#ffb400">★★★★★</div></div>
           </div>
-          <p style="color:var(--muted);margin-top:12px">“AIM's practical labs and mocks got me promoted within months. Highly recommended.”</p>
+          <p style="color:#ffffff;margin-top:12px">“AIM's practical labs and mocks got me promoted within months. Highly recommended.”</p>
         </div>
 
         <div class="testimonial">
@@ -504,7 +765,7 @@
             <img src="https://via.placeholder.com/64" style="width:64px;height:64px;border-radius:50%;border:3px solid rgba(255,255,255,0.02)" alt="">
             <div><div style="font-weight:800">Tilak Raj</div><div style="color:#ffb400">★★★★★</div></div>
           </div>
-          <p style="color:var(--muted);margin-top:12px">“Focused content, meaningful mock tests and helpful mentors.”</p>
+          <p style="color:#ffffff;margin-top:12px">“Focused content, meaningful mock tests and helpful mentors.”</p>
         </div>
 
         <div class="testimonial">
@@ -512,7 +773,7 @@
             <img src="https://via.placeholder.com/64" style="width:64px;height:64px;border-radius:50%;border:3px solid rgba(255,255,255,0.02)" alt="">
             <div><div style="font-weight:800">Nandita Ghosh</div><div style="color:#ffb400">★★★★★</div></div>
           </div>
-          <p style="color:var(--muted);margin-top:12px">“Passed with top marks — AIM's mock test analytics helped a lot.”</p>
+          <p style="color:#ffffff;margin-top:12px">“Passed with top marks — AIM's mock test analytics helped a lot.”</p>
         </div>
       </div>
     </div>
@@ -548,7 +809,7 @@
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
       <div>&copy; <strong>AIM</strong> — 2025 • All rights reserved</div>
-      <div style="color:var(--muted)">Contact: hi@aim.example • Chandigarh, India</div>
+      <div style="color:#ffffff">Contact: hi@aim.example • Chandigarh, India</div>
     </div>
   </footer>
 
@@ -698,6 +959,21 @@
     window.addEventListener('resize', () => {
       // noop for now - path animation uses getPointAtLength which adapts to SVG scaling
     });
+
+  const profileBtn = document.getElementById('profileBtn');
+  const authOverlay = document.getElementById('authOverlay');
+
+  profileBtn.addEventListener('click', () => {
+    authOverlay.classList.add('active');
+  });
+
+  authOverlay.addEventListener('click', (e) => {
+    if (e.target === authOverlay) {
+      authOverlay.classList.remove('active');
+    }
+  });
+
+
   </script>
 </body>
 </html>
