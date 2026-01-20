@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css"> 
+  <link rel="script" href="script.js"> 
 </head>
 <body>
 
@@ -34,6 +35,7 @@
     <nav class="primary" role="navigation" aria-label="primary">
       <a href="#home">Home</a>
       <a href="#courses">Courses</a>
+      <a href="about_us.html">about us</a>
       <a href="#toppers">Toppers</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -66,6 +68,7 @@
       <nav class="mobile-nav">
         <a href="#home" class="mobile-nav-link">Home</a>
         <a href="#courses" class="mobile-nav-link">Courses</a>
+        <a href="about_us.html" class="mobile-nav-link">about us</a>
         <a href="#toppers" class="mobile-nav-link">Toppers</a>
         <a href="#faq" class="mobile-nav-link">FAQ</a>
         <button class="mobile-dropdown-cta" onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">Browse Architecture</button>
@@ -456,11 +459,6 @@ With a strong foundation in architectural design, civil engineering consultancy,
     </div>
   </div>
 </div>
-
-
-
-
-
   <!-- FOOTER -->
   <footer>
     <div class="container">
@@ -493,8 +491,7 @@ With a strong foundation in architectural design, civil engineering consultancy,
                     <div class="contact-details">
                         <a href="mailto:bhandari.krishna01@gmail.com">bhandari.krishna01@gmail.com</a>
                     </div>
-                </div>
-                
+                </div> 
                 <div class="contact-item">
                     <div class="contact-icon">📞</div>
                     <div class="contact-details">
@@ -908,7 +905,6 @@ document.addEventListener('DOMContentLoaded', function() {
       mobileMenuBtn.setAttribute('aria-expanded', 'false');
     }
   });
-  
   // Close dropdown on escape key
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && mobileDropdown.classList.contains('active')) {
@@ -919,6 +915,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
