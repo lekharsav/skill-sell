@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3D Video Animation & Modelling — BBC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+<header class="site-nav" role="banner"> <div class="container nav-inner"><div style="display:flex;align-items:center;gap:14px"><div class="logo-mark">BBC</div></div><nav class="primary"><a href="index.html">Home</a><a href="cource.html">Courses</a><a href="about_us.html">about us</a></nav><div class="nav-right"><button class="profile-btn" id="profileBtn">Profile</button></div></div></header>
+
+<main class="container" style="padding:48px 0;text-align:center">
+  <h1>3D Video Animation & Modelling</h1>
+  <p>Learn 3D modelling, animation workflows and rendering for architectural visualizations and presentations.</p>
+  <button class="btn-primary" id="enrollBtn">Enroll — Login</button>
+</main>
+
+<div class="auth-overlay" id="authOverlay"><div class="auth-card"><h3>Account Access</h3><p>Login or create a new account to continue</p><button class="auth-main login">Login</button></div></div>
+
+<footer><div class="container"><div class="footer-content"><div class="footer-brand"><div class="logo-mark">BBC</div><h3>Engineering Consultantancy Pvt.Ltd</h3></div></div></div></footer>
+
+<script>document.getElementById('enrollBtn')?.addEventListener('click', ()=> document.getElementById('authOverlay')?.classList.add('active'));</script>
+</body>
+</html>

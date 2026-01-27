@@ -381,3 +381,350 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+//cource
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Course data with 30+ courses for pagination
+    const coursesData = [
+        { id: 1, title: "Full Stack Web Development", category: "software", description: "Master front-end and back-end technologies to build complete web applications from scratch.", duration: "6 Months", level: "Beginner to Advanced", price: "₹24,999", image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 2, title: "Machine Learning & AI Engineering", category: "ai", description: "Learn to build intelligent systems and predictive models using Python and TensorFlow.", duration: "8 Months", level: "Intermediate", price: "₹34,999", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 3, title: "Robotics & Automation", category: "mechanical", description: "Design and program industrial robots and automated systems for manufacturing.", duration: "7 Months", level: "Advanced", price: "₹29,999", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 4, title: "Data Science & Analytics", category: "software", description: "Master data analysis, visualization, and statistical modeling for business intelligence.", duration: "5 Months", level: "Beginner to Intermediate", price: "₹27,999", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 5, title: "IoT & Embedded Systems", category: "electrical", description: "Build connected devices and systems using microcontrollers and IoT protocols.", duration: "6 Months", level: "Intermediate", price: "₹26,999", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 6, title: "Structural Engineering & Design", category: "civil", description: "Learn structural analysis and design principles for buildings and infrastructure.", duration: "9 Months", level: "Advanced", price: "₹31,999", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 7, title: "Mobile App Development", category: "software", description: "Build native and cross-platform mobile applications for iOS and Android.", duration: "5 Months", level: "Intermediate", price: "₹25,999", image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 8, title: "Cloud Computing & DevOps", category: "software", description: "Master cloud platforms and DevOps practices for scalable applications.", duration: "6 Months", level: "Intermediate", price: "₹28,999", image: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 9, title: "Cybersecurity Engineering", category: "software", description: "Learn to protect systems and networks from cyber threats and attacks.", duration: "7 Months", level: "Advanced", price: "₹32,999", image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 10, title: "Blockchain Development", category: "software", description: "Build decentralized applications and smart contracts using blockchain technology.", duration: "6 Months", level: "Advanced", price: "₹35,999", image: "https://images.unsplash.com/photo-1620336655055-bd87c5d1d73f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 11, title: "Automotive Engineering", category: "mechanical", description: "Design and develop automotive systems and vehicle technologies.", duration: "8 Months", level: "Advanced", price: "₹33,999", image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 12, title: "Aerospace Engineering", category: "mechanical", description: "Study aircraft and spacecraft design, development, and testing.", duration: "9 Months", level: "Advanced", price: "₹36,999", image: "https://images.unsplash.com/photo-1517976547714-720226b864c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 13, title: "Power Systems Engineering", category: "electrical", description: "Design and analyze electrical power generation and distribution systems.", duration: "7 Months", level: "Intermediate", price: "₹28,999", image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 14, title: "Renewable Energy Systems", category: "electrical", description: "Design and implement solar, wind, and other renewable energy solutions.", duration: "6 Months", level: "Intermediate", price: "₹27,999", image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 15, title: "Construction Management", category: "civil", description: "Learn project management techniques for construction projects.", duration: "7 Months", level: "Intermediate", price: "₹26,999", image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 16, title: "Deep Learning Fundamentals", category: "ai", description: "Master neural networks and deep learning algorithms for AI applications.", duration: "6 Months", level: "Advanced", price: "₹32,999", image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 17, title: "Computer Vision Engineering", category: "ai", description: "Build systems that can interpret and understand visual information.", duration: "7 Months", level: "Advanced", price: "₹34,999", image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 18, title: "Natural Language Processing", category: "ai", description: "Develop systems that can understand and generate human language.", duration: "6 Months", level: "Advanced", price: "₹33,999", image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 19, title: "Game Development", category: "software", description: "Create interactive games using modern game engines and programming.", duration: "8 Months", level: "Intermediate", price: "₹29,999", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 20, title: "Database Engineering", category: "software", description: "Design and optimize database systems for high-performance applications.", duration: "5 Months", level: "Intermediate", price: "₹25,999", image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 21, title: "Thermal Engineering", category: "mechanical", description: "Study heat transfer and thermodynamics for engineering applications.", duration: "6 Months", level: "Intermediate", price: "₹26,999", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 22, title: "Control Systems Engineering", category: "electrical", description: "Design and analyze control systems for automation and robotics.", duration: "7 Months", level: "Advanced", price: "₹30,999", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 23, title: "Geotechnical Engineering", category: "civil", description: "Study soil mechanics and foundation engineering for construction.", duration: "6 Months", level: "Intermediate", price: "₹27,999", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 24, title: "UI/UX Design for Engineers", category: "software", description: "Learn user interface and experience design principles for engineering applications.", duration: "4 Months", level: "Beginner", price: "₹22,999", image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 25, title: "Quantum Computing Fundamentals", category: "ai", description: "Introduction to quantum computing principles and algorithms.", duration: "8 Months", level: "Advanced", price: "₹39,999", image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 26, title: "Biomedical Engineering", category: "mechanical", description: "Apply engineering principles to medical and healthcare solutions.", duration: "9 Months", level: "Advanced", price: "₹35,999", image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 27, title: "Network Engineering", category: "software", description: "Design and implement computer networks and communication systems.", duration: "6 Months", level: "Intermediate", price: "₹27,999", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 28, title: "Material Science Engineering", category: "mechanical", description: "Study materials properties and applications in engineering design.", duration: "7 Months", level: "Intermediate", price: "₹28,999", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 29, title: "Environmental Engineering", category: "civil", description: "Design solutions for environmental protection and sustainability.", duration: "8 Months", level: "Intermediate", price: "₹29,999", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" },
+        { id: 30, title: "Digital Signal Processing", category: "electrical", description: "Process and analyze digital signals for various applications.", duration: "6 Months", level: "Advanced", price: "₹31,999", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" }
+    ];
+
+    // Pagination variables
+    let currentPage = 1;
+    let currentCategory = 'all';
+    let filteredCourses = [...coursesData];
+    
+    // Items per page based on screen size
+    function getItemsPerPage() {
+        return window.innerWidth <= 768 ? 6 : 12;
+    }
+    
+    let itemsPerPage = getItemsPerPage();
+    
+    // DOM Elements
+    const courseGrid = document.querySelector('.course-grid');
+    const categoryTabs = document.querySelectorAll('.category-tab');
+    const paginationContainer = document.querySelector('.pagination-container');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const pageNumbersContainer = document.querySelector('.page-numbers');
+    const pageInfo = document.querySelector('.page-info');
+    const currentRange = document.querySelector('.current-range');
+    const totalCourses = document.querySelector('.total-courses');
+    
+    // Initialize
+    function init() {
+        // Update items per page based on initial screen size
+        itemsPerPage = getItemsPerPage();
+        
+        // Render initial courses
+        renderCourses();
+        setupEventListeners();
+        updatePaginationInfo();
+        
+        // Update on window resize
+        window.addEventListener('resize', handleResize);
+    }
+    
+    // Handle window resize
+    function handleResize() {
+        const newItemsPerPage = getItemsPerPage();
+        if (newItemsPerPage !== itemsPerPage) {
+            itemsPerPage = newItemsPerPage;
+            currentPage = 1;
+            renderCourses();
+            updatePaginationInfo();
+        }
+    }
+    
+    // Render courses based on current page and category
+    function renderCourses() {
+        // Clear existing courses
+        courseGrid.innerHTML = '';
+        
+        // Get courses for current page
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const coursesToShow = filteredCourses.slice(startIndex, endIndex);
+        
+        // Create course cards
+        coursesToShow.forEach(course => {
+            const courseCard = createCourseCard(course);
+            courseGrid.appendChild(courseCard);
+        });
+        
+        // If no courses found
+        if (coursesToShow.length === 0) {
+            courseGrid.innerHTML = `
+                <div class="no-courses" style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+                    <h3 style="color: #015383; margin-bottom: 15px;">No courses found</h3>
+                    <p style="color: #015383; opacity: 0.8;">Try selecting a different category</p>
+                </div>
+            `;
+        }
+    }
+    
+    // Create a course card element
+    function createCourseCard(course) {
+        const card = document.createElement('div');
+        card.className = 'course-card';
+        card.setAttribute('data-category', course.category);
+        
+        card.innerHTML = `
+            <div class="course-image">
+                <img src="${course.image}" alt="${course.title}" loading="lazy">
+            </div>
+            <div class="course-content">
+                <div class="course-category">${getCategoryName(course.category)}</div>
+                <h3 class="course-title">${course.title}</h3>
+                <p class="course-description">${course.description}</p>
+                
+                <div class="course-meta">
+                    <div class="course-duration">
+                        <i class="far fa-clock"></i>
+                        <span>${course.duration}</span>
+                    </div>
+                    <div class="course-level">
+                        <i class="fas fa-signal"></i>
+                        <span>${course.level}</span>
+                    </div>
+                </div>
+                
+                <div class="course-footer">
+                    <div class="course-price">${course.price}</div>
+                    <button class="course-cta" data-id="${course.id}">Enroll Now</button>
+                </div>
+            </div>
+        `;
+        
+        // Add click event to enroll button
+        const enrollBtn = card.querySelector('.course-cta');
+        enrollBtn.addEventListener('click', function() {
+            const courseId = this.getAttribute('data-id');
+            const courseTitle = coursesData.find(c => c.id == courseId).title;
+            alert(`Thank you for your interest in "${courseTitle}"! Our team will contact you shortly.`);
+        });
+        
+        return card;
+    }
+    
+    // Get category display name
+    function getCategoryName(category) {
+        const categoryMap = {
+            'software': 'Software Engineering',
+            'mechanical': 'Mechanical Engineering',
+            'electrical': 'Electrical Engineering',
+            'civil': 'Civil Engineering',
+            'ai': 'AI & Machine Learning'
+        };
+        return categoryMap[category] || category;
+    }
+    
+    // Setup event listeners
+    function setupEventListeners() {
+        // Category tabs
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab
+                categoryTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update category filter
+                currentCategory = this.getAttribute('data-category');
+                currentPage = 1;
+                
+                // Filter courses
+                if (currentCategory === 'all') {
+                    filteredCourses = [...coursesData];
+                } else {
+                    filteredCourses = coursesData.filter(course => course.category === currentCategory);
+                }
+                
+                // Render courses and update pagination
+                renderCourses();
+                updatePaginationInfo();
+            });
+        });
+        
+        // Pagination buttons
+        prevBtn.addEventListener('click', goToPrevPage);
+        nextBtn.addEventListener('click', goToNextPage);
+        
+        // CTA buttons
+        document.querySelector('.btn-primary').addEventListener('click', function() {
+            // Scroll to courses section
+            document.querySelector('.courses-categories').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        document.querySelector('.btn-outline').addEventListener('click', function() {
+            alert('Thank you for your interest! Our counselor will contact you within 24 hours.');
+        });
+        
+        // Nav CTA buttons
+        document.querySelector('.btn-cta').addEventListener('click', function() {
+            alert('Registration portal will open in a new window.');
+        });
+    }
+    
+    // Go to previous page
+    function goToPrevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            renderCourses();
+            updatePaginationInfo();
+            scrollToTop();
+        }
+    }
+    
+    // Go to next page
+    function goToNextPage() {
+        const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderCourses();
+            updatePaginationInfo();
+            scrollToTop();
+        }
+    }
+    
+    // Go to specific page
+    function goToPage(page) {
+        const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
+        if (page >= 1 && page <= totalPages) {
+            currentPage = page;
+            renderCourses();
+            updatePaginationInfo();
+            scrollToTop();
+        }
+    }
+    
+    // Scroll to top of courses grid
+    function scrollToTop() {
+        courseGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    
+    // Update pagination controls and info
+    function updatePaginationInfo() {
+        const totalCoursesCount = filteredCourses.length;
+        const totalPages = Math.ceil(totalCoursesCount / itemsPerPage);
+        
+        // Update page info
+        const start = (currentPage - 1) * itemsPerPage + 1;
+        const end = Math.min(currentPage * itemsPerPage, totalCoursesCount);
+        currentRange.textContent = `${start}-${end}`;
+        totalCourses.textContent = totalCoursesCount;
+        
+        // Update button states
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = currentPage === totalPages || totalPages === 0;
+        
+        // Generate page numbers
+        generatePageNumbers(totalPages);
+    }
+    
+    // Generate page number buttons
+    function generatePageNumbers(totalPages) {
+        pageNumbersContainer.innerHTML = '';
+        
+        // Show max 5 page numbers
+        const maxVisiblePages = 5;
+        let startPage, endPage;
+        
+        if (totalPages <= maxVisiblePages) {
+            // Show all pages
+            startPage = 1;
+            endPage = totalPages;
+        } else {
+            // Calculate start and end pages
+            const maxPagesBeforeCurrent = Math.floor(maxVisiblePages / 2);
+            const maxPagesAfterCurrent = Math.ceil(maxVisiblePages / 2) - 1;
+            
+            if (currentPage <= maxPagesBeforeCurrent) {
+                // Near the beginning
+                startPage = 1;
+                endPage = maxVisiblePages;
+            } else if (currentPage + maxPagesAfterCurrent >= totalPages) {
+                // Near the end
+                startPage = totalPages - maxVisiblePages + 1;
+                endPage = totalPages;
+            } else {
+                // Somewhere in the middle
+                startPage = currentPage - maxPagesBeforeCurrent;
+                endPage = currentPage + maxPagesAfterCurrent;
+            }
+        }
+        
+        // Create page number buttons
+        for (let i = startPage; i <= endPage; i++) {
+            const pageBtn = document.createElement('button');
+            pageBtn.className = 'page-number';
+            if (i === currentPage) {
+                pageBtn.classList.add('active');
+            }
+            pageBtn.textContent = i;
+            pageBtn.addEventListener('click', () => goToPage(i));
+            pageNumbersContainer.appendChild(pageBtn);
+        }
+        
+        // Add ellipsis if needed
+        if (startPage > 1) {
+            const ellipsis1 = document.createElement('span');
+            ellipsis1.className = 'page-number dots';
+            ellipsis1.textContent = '...';
+            pageNumbersContainer.insertBefore(ellipsis1, pageNumbersContainer.firstChild);
+            
+            const firstPageBtn = document.createElement('button');
+            firstPageBtn.className = 'page-number';
+            firstPageBtn.textContent = '1';
+            firstPageBtn.addEventListener('click', () => goToPage(1));
+            pageNumbersContainer.insertBefore(firstPageBtn, pageNumbersContainer.firstChild);
+        }
+        
+        if (endPage < totalPages) {
+            const ellipsis2 = document.createElement('span');
+            ellipsis2.className = 'page-number dots';
+            ellipsis2.textContent = '...';
+            pageNumbersContainer.appendChild(ellipsis2);
+            
+            const lastPageBtn = document.createElement('button');
+            lastPageBtn.className = 'page-number';
+            lastPageBtn.textContent = totalPages;
+            lastPageBtn.addEventListener('click', () => goToPage(totalPages));
+            pageNumbersContainer.appendChild(lastPageBtn);
+        }
+    }
+    
+    // Initialize the page
+    init();
+});

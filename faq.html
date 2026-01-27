@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQ — BBC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="floating-shapes" aria-hidden="true">
+    <img class="shape float-a" src="https://via.placeholder.com/56/635BFF/ffffff?text=★" alt="">
+    <img class="shape float-b" src="https://via.placeholder.com/56/00D4FF/ffffff?text=✦" alt="">
+    <img class="shape float-c" src="https://via.placeholder.com/56/7C4DFF/ffffff?text=⚡" alt="">
+  </div>
+
+<!-- NAV (copied from index) -->
+<header class="site-nav" role="banner">
+  <div class="container nav-inner">
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="logo-mark" aria-hidden="true">BBC</div>
+      <div class="brand"><div style="font-size:12px;color:#ffffff;margin-top:2px;font-weight:700">Engineering Consultantancy Pvt.Ltd.</div></div>
+    </div>
+    <nav class="primary" role="navigation" aria-label="primary">
+      <a href="index.html">Home</a>
+      <a href="cource.html">Courses</a>
+      <a href="about_us.html">about us</a>
+      <a href="#toppers">Toppers</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <button class="btn-cta desktop-cta" onclick="document.getElementById('courses')?.scrollIntoView({behavior:'smooth'})">Browse Architecture</button>
+      <button class="profile-btn" id="profileBtn" aria-label="Account">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.761 0 5-2.462 5-5.5S14.761 1 12 1 7 3.462 7 6.5 9.239 12 12 12Zm0 2c-4.418 0-8 2.239-8 5v2h16v-2c0-2.761-3.582-5-8-5Z" fill="currentColor"/></svg>
+      </button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-dropdown" id="mobileDropdown">
+    <nav class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="cource.html" class="mobile-nav-link">Courses</a>
+      <a href="about_us.html" class="mobile-nav-link">about us</a>
+      <a href="#toppers" class="mobile-nav-link">Toppers</a>
+      <a href="#faq" class="mobile-nav-link">FAQ</a>
+      <button class="mobile-dropdown-cta" onclick="document.getElementById('courses')?.scrollIntoView({behavior:'smooth'})">Browse Architecture</button>
+    </nav>
+  </div>
+</header>
+
+<!-- FAQ SECTION (copied from index) -->
+<main class="container" style="padding:40px 0;">
+  <section id="faq" class="faq-section" style="background-image: url('teach1.avif'); background-size: cover; background-position: center;">
+    <div style="background: rgba(255,255,255,0.94); padding:36px; border-radius:12px;">
+      <div style="max-width:900px;margin:0 auto;text-align:center">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <p style="color:#021428;opacity:0.9;">Below are answers to common questions about courses, enrollment, payments and certification. If you don't find what you need, contact our support team using the details at the page bottom.</p>
+      </div>
+
+      <div class="container" style="margin-top:18px">
+        <div class="faq-grid">
+          <div class="faq-card" onclick="openFaqModal('What does BBC teach?','BBC provides promotion-focused courses, mock tests, certification preparation, and mentorship for working professionals. Our curriculum emphasises practical project work and timed mocks aligned to exam formats.')">
+            <h4>What does BBC teach?</h4>
+            <p>Tap to read answer</p>
+          </div>
+
+          <div class="faq-card" onclick="openFaqModal('How long are the courses?','Most BBC courses run for 6–12 weeks, including live sessions, recorded content, weekly assignments and mock assessments. Self-paced options are available for select courses.')">
+            <h4>How long are the courses?</h4>
+            <p>Tap to read answer</p>
+          </div>
+
+          <div class="faq-card" onclick="openFaqModal('Do you offer refunds?','Yes. We offer a 7-day refund policy on eligible courses. Refunds are processed after deducting any payment gateway fees; see the full refund policy in the Terms & Conditions.')">
+            <h4>Do you offer refunds?</h4>
+            <p>Tap to read answer</p>
+          </div>
+
+          <div class="faq-card" onclick="openFaqModal('What are the prerequisites?','Most courses are designed for working professionals and require a basic understanding of the subject area. Specific prerequisites are listed on each course page under “Overview”.')">
+            <h4>What are the prerequisites?</h4>
+            <p>Tap to read answer</p>
+          </div>
+
+          <div class="faq-card" onclick="openFaqModal('How do I pay?','We accept payments via bank transfer, mobile payment (eSewa / Khalti), and major debit/credit cards where available. Contact our admissions team for invoice or installment options.')">
+            <h4>How do I pay?</h4>
+            <p>Tap to read answer</p>
+          </div>
+
+          <div class="faq-card" onclick="openFaqModal('Do you provide certificates?','Yes. On successful completion of a course and required assessments, learners receive a BBC completion certificate which can be used for official submissions or job applications.')">
+            <h4>Do you provide certificates?</h4>
+            <p>Tap to read answer</p>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;max-width:900px;margin-left:auto;margin-right:auto;text-align:left;color:#021428">
+          <h4>Notes & contact</h4>
+          <ul>
+            <li>For enrollment help, email <a href="mailto:bhandari.krishna01@gmail.com">bhandari.krishna01@gmail.com</a> or call <a href="tel:+9779858422178">+977 9858422178</a>.</li>
+            <li>Admissions hours: Mon–Sat, 9:00–17:00 (Nepal Time).</li>
+            <li>Can't find an answer? Use the site chat or WhatsApp button at the bottom-right to message us directly.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FAQ MODAL -->
+      <div class="modal fade" id="faqModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content faq-modal-content">
+            <div class="modal-header">
+              <h5 id="faqModalTitle"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="faqModalBody"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Auth overlay (shared) -->
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-card">
+    <h3>Account Access</h3>
+    <p>Login or create a new account to continue</p>
+    <button class="auth-main login">Login</button>
+    <button class="auth-main signup">Sign Up</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-mark">BBC</div>
+          <h3>Engineering Consultantancy Pvt.Ltd</h3>
+        </div>
+        <p class="footer-tagline">Empowering learners with cutting-edge education</p>
+        <div class="footer-copyright">&copy; <strong>BBC</strong> — 2025 • All rights reserved</div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/9779858422178" target="_blank" style="position:fixed;right:16px;bottom:18px;background:#25D366;width:64px;height:64px;border-radius:999px;display:grid;place-items:center;box-shadow:0 3px 2px rgba(1, 4, 12, 1);border: 2px solid rgba(255, 255, 255, 1);z-index:80">
+    <svg width="34" height="34" viewBox="0 0 24 24"><path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.47-.149-.67.15-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-1.758-.867-2.905-1.54-4.07-3.313-.308-.53.308-.495.89-1.64.099-.198.05-.372-.025-.522-.075-.149-.67-1.611-.92-2.207-.242-.579-.487-.5-.67-.51-.173-.009-.372-.01-.57-.01-.198 0-.52.074-.793.372s-1.04 1.017-1.04 2.479 1.065 2.876 1.213 3.074c.148.198 2.095 3.2 5.076 4.487 3 .8 3.003.534 3.545.5.543-.034 1.758-.72 2.006-1.413.248-.693.248-1.287.173-1.413-.074-.125-.272-.198-.57-.347z"/></svg>
+  </a>
+
+  <!-- Shared scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
