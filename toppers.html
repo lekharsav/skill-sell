@@ -27,8 +27,8 @@
       <a href="index.html">Home</a>
       <a href="cource.html">Courses</a>
       <a href="about_us.html">about us</a>
-      <a href="#toppers">Toppers</a>
-      <a href="#faq">FAQ</a>
+      <a href="toppers.html">Toppers</a>
+      <a href="faq.html">FAQ</a>
     </nav>
     <div class="nav-right">
       <button class="btn-cta desktop-cta" onclick="document.getElementById('courses')?.scrollIntoView({behavior:'smooth'})">Browse Architecture</button>
@@ -45,8 +45,8 @@
       <a href="index.html" class="mobile-nav-link">Home</a>
       <a href="cource.html" class="mobile-nav-link">Courses</a>
       <a href="about_us.html" class="mobile-nav-link">about us</a>
-      <a href="#toppers" class="mobile-nav-link">Toppers</a>
-      <a href="#faq" class="mobile-nav-link">FAQ</a>
+      <a href="toppers.html" class="mobile-nav-link">Toppers</a>
+      <a href="faq.html" class="mobile-nav-link">FAQ</a>
       <button class="mobile-dropdown-cta" onclick="document.getElementById('courses')?.scrollIntoView({behavior:'smooth'})">Browse Architecture</button>
     </nav>
   </div>
@@ -150,5 +150,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
   <script src="main.js"></script>
+    <script>
+    // Reveal carousel slides when they enter viewport (desktop) and activate visibility class
+    document.addEventListener('DOMContentLoaded', function(){
+      const slides = document.querySelectorAll('.carousel-slide');
+      if(!slides.length) return;
+      const io = new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+      }, {threshold:0.18});
+      slides.forEach(s=> io.observe(s));
+    });
+    </script>
 </body>
 </html>
