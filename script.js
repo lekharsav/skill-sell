@@ -81,7 +81,10 @@
     
     // 5) small reveal animations for sections (on-scroll)
     (function () {
-      const sections = document.querySelectorAll('section, .course-card, .testimonial');
+      // Only apply reveal transforms to sections that do NOT contain modal markup.
+      const all = Array.from(document.querySelectorAll('section, .course-card, .testimonial'));
+      const sections = all.filter(el => !el.querySelector('.modal'));
+      if(!sections.length) return;
       const io = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -103,26 +106,46 @@
       document.addEventListener('mousedown', () => document.documentElement.classList.remove('show-focus'));
     })();
 
-    // 7) micro interaction: CTA scroll
-    document.getElementById('ctaEnroll').addEventListener('click', function () {
-      document.getElementById('courses').scrollIntoView({behavior: 'smooth'});
-    });
+    // 7) micro interaction: CTA scroll (guard elements)
+    (function(){
+      const cta = document.getElementById('ctaEnroll');
+      if(!cta) return;
+      cta.addEventListener('click', function () {
+        const coursesEl = document.getElementById('courses');
+        if(coursesEl) coursesEl.scrollIntoView({behavior: 'smooth'});
+      });
+    })();
 
     // 8) ensure moving dot reposition on resize for SVG scaling
     window.addEventListener('resize', () => {
       // noop for now - path animation uses getPointAtLength which adapts to SVG scaling
     });
 
-  const profileBtn = document.getElementById('profileBtn');
-  const authOverlay = document.getElementById('authOverlay');
+  // Profile/login overlay: attach handlers after DOM ready and guard against missing elements
+  document.addEventListener('DOMContentLoaded', function(){
+    const profileBtn = document.getElementById('profileBtn');
+    const authOverlay = document.getElementById('authOverlay');
+    if(!profileBtn || !authOverlay) return;
 
-  profileBtn.addEventListener('click', () => {
-    authOverlay.classList.add('active');
-  });
+    profileBtn.addEventListener('click', () => {
+      authOverlay.classList.add('active');
+    });
 
-  authOverlay.addEventListener('click', (e) => {
-    if (e.target === authOverlay) {
-      authOverlay.classList.remove('active');
+    authOverlay.addEventListener('click', (e) => {
+      if (e.target === authOverlay) {
+        authOverlay.classList.remove('active');
+      }
+    });
+
+    // open bootstrap login modal when login button inside overlay is clicked
+    const loginBtn = authOverlay.querySelector('.auth-main.login');
+    const loginModalEl = document.getElementById('loginModal');
+    if(loginBtn && loginModalEl){
+      loginBtn.addEventListener('click', ()=>{
+        authOverlay.classList.remove('active');
+        const m = new bootstrap.Modal(loginModalEl);
+        m.show();
+      });
     }
   });
 // 9) Hero entry animation trigger
@@ -231,6 +254,13 @@ function openFaqModal(title, body) {
   const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
   modal.show();
 }
+
+// Ensure any modal markup is moved to document.body so fixed positioning and Bootstrap backdrop work correctly
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.modal').forEach(m => {
+    if(m.parentElement !== document.body) document.body.appendChild(m);
+  });
+});
 
 document.addEventListener('DOMContentLoaded', function() {
   const slides = document.querySelectorAll('.carousel-slide');
@@ -361,6 +391,24 @@ document.addEventListener('DOMContentLoaded', function() {
   // Close dropdown when clicking on links
   mobileNavLinks.forEach(link => {
     link.addEventListener('click', function() {
+      mobileDropdown.classList.remove('active');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Handle mobile dropdown CTA (scroll if `#courses` exists, otherwise navigate)
+  const mobileCtas = document.querySelectorAll('.mobile-dropdown-cta');
+  mobileCtas.forEach(btn => {
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      const coursesEl = document.getElementById('courses');
+      if(coursesEl){
+        coursesEl.scrollIntoView({behavior: 'smooth'});
+      } else {
+        // On pages without #courses, navigate to courses page
+        window.location.href = 'cource.html';
+      }
+      // close dropdown after action
       mobileDropdown.classList.remove('active');
       mobileMenuBtn.setAttribute('aria-expanded', 'false');
     });

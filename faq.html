@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="script" href="script.js"> 
 </head>
 <body>
 
@@ -54,7 +55,19 @@
 
 <!-- FAQ SECTION (copied from index) -->
 <main class="container" style="padding:40px 0;">
-  <section id="faq" class="faq-section" style="background-image: url('teach1.avif'); background-size: cover; background-position: center;">
+  <!-- Page banner (not background image) -->
+  <section class="page-banner" style="background-image:linear-gradient(rgba(2,8,20,0.55), rgba(2,8,20,0.25)), url('teach1.avif');background-size:cover;background-position:center;color:#fff;">
+    <div class="container">
+      <div>
+        <h2>Frequently Asked Questions</h2>
+        <p>Find quick answers or contact us using the form below.</p>
+      </div>
+      <div style="text-align:right">
+        <div style="font-weight:800;color:var(--accent-2)">Need help? Reach out.</div>
+      </div>
+    </div>
+  </section>
+  <section id="faq" class="faq-section">
     <div style="background: rgba(255,255,255,0.94); padding:36px; border-radius:12px;">
       <div style="max-width:900px;margin:0 auto;text-align:center">
         <h2 class="faq-title">Frequently Asked Questions</h2>
@@ -104,6 +117,48 @@
         </div>
       </div>
 
+        <!-- ENROLLMENT STATS BANNER -->
+        <div style="margin-top:28px;padding:18px;border-radius:12px;background:linear-gradient(90deg,var(--accent-2),var(--accent-1));color:#021428;font-weight:800;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+          <div style="font-size:18px">New enrollments</div>
+          <div style="display:flex;gap:18px;align-items:center">
+            <div style="text-align:center">
+              <div class="counter" data-target="34" id="weekCount" style="font-size:20px;font-weight:900">0</div>
+              <div style="font-size:12px">This week</div>
+            </div>
+            <div style="text-align:center">
+              <div class="counter" data-target="128" id="monthCount" style="font-size:20px;font-weight:900">0</div>
+              <div style="font-size:12px">This month</div>
+            </div>
+            <div style="text-align:center">
+              <div class="counter" data-target="1024" id="yearCount" style="font-size:20px;font-weight:900">0</div>
+              <div style="font-size:12px">This year</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT / ENROLLMENT FORM -->
+        <div style="margin-top:28px;background:linear-gradient(180deg, rgba(255,255,255,0.98), #f7fbff);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.6)">
+          <h3 style="color:#015383;margin-top:0">Get Enrolled / Contact Admissions</h3>
+          <form id="enrollForm" style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+            <input type="text" name="fullname" placeholder="Full name" required style="padding:10px;border-radius:8px;border:1px solid #dfe7fa">
+            <input type="tel" name="phone" placeholder="Phone number" required style="padding:10px;border-radius:8px;border:1px solid #dfe7fa">
+            <input type="email" name="email" placeholder="Email address" required style="padding:10px;border-radius:8px;border:1px solid #dfe7fa">
+            <input type="text" name="address" placeholder="Address" style="padding:10px;border-radius:8px;border:1px solid #dfe7fa">
+            <select name="course" required style="padding:10px;border-radius:8px;border:1px solid #dfe7fa">
+              <option value="">Select a course</option>
+              <option>Building Architectural Design</option>
+              <option>3D Video Animation & Modelling</option>
+              <option>Quantity Survey</option>
+              <option>Property Valuation</option>
+              <option>Building Plan Pass</option>
+            </select>
+            <div style="display:flex;align-items:center;gap:8px">
+              <button class="btn-primary" type="submit">Submit</button>
+              <button type="reset" class="btn-outline">Reset</button>
+            </div>
+          </form>
+        </div>
+
       <!-- FAQ MODAL -->
       <div class="modal fade" id="faqModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
@@ -121,30 +176,109 @@
 </main>
 
 <!-- Auth overlay (shared) -->
-<div class="auth-overlay" id="authOverlay">
+  <div class="auth-overlay" id="authOverlay">
   <div class="auth-card">
+
     <h3>Account Access</h3>
     <p>Login or create a new account to continue</p>
+
+    <!-- Primary actions -->
     <button class="auth-main login">Login</button>
     <button class="auth-main signup">Sign Up</button>
+
+    <div class="divider">
+      <span>or continue with</span>
+    </div>
+
+    <!-- Social login -->
+    <button class="auth-social google">Google</button>
+    <button class="auth-social facebook">Facebook</button>
+    <button class="auth-social twitter">X</button>
+
+    <a href="#" class="forgot">Forgot password?</a>
+
+  </div>
+</div>
+
+
+<!-- Login modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login to your account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <input type="email" name="email" placeholder="Email" required style="padding:10px;border-radius:8px;border:1px solid #e6eefb">
+            <input type="password" name="password" placeholder="Password" required style="padding:10px;border-radius:8px;border:1px solid #e6eefb">
+            <div style="display:flex;gap:8px;justify-content:space-between;align-items:center">
+              <button class="btn-primary" type="submit">Login</button>
+              <button type="button" class="btn-outline" data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="logo-mark">BBC</div>
-          <h3>Engineering Consultantancy Pvt.Ltd</h3>
+       <footer>
+    <div class="container">
+        <div class="footer-content">
+            <!-- Left Column: Brand Info -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-mark">BBC</div>
+                    <h3>Engineering Consultantancy Pvt.Ltd</h3>
+                </div>
+                <p class="footer-tagline">Empowering learners with cutting-edge education</p>
+                <div class="footer-copyright">&copy; <strong>BBC</strong> — 2025 • All rights reserved</div>
+            </div>
+            
+            <!-- Right Column: Contact Info -->
+            <div class="footer-contact">
+                <h4>Contact Information</h4>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <p>Ward 5, Dhangadhi sub-metropolitan city</p>
+                        <p>Kailali, Sudurpaschim pradesh, Nepal</p>
+                        <p class="address-note">Near North Gate of Dhangadhi stadium</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-details">
+                        <a href="mailto:bhandari.krishna01@gmail.com">bhandari.krishna01@gmail.com</a>
+                    </div>
+                </div> 
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <a href="tel:+9779858422178">+977 9858422178</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Media Column -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook">f</a>
+                    <a href="#" class="social-icon twitter">t</a>
+                    <a href="#" class="social-icon instagram">ig</a>
+                    <a href="#" class="social-icon linkedin">in</a>
+                </div>
+            </div>
         </div>
-        <p class="footer-tagline">Empowering learners with cutting-edge education</p>
-        <div class="footer-copyright">&copy; <strong>BBC</strong> — 2025 • All rights reserved</div>
-      </div>
     </div>
-  </div>
-  </footer>
+</footer>
 
   <!-- Floating WhatsApp CTA -->
   <a href="https://wa.me/9779858422178" target="_blank" style="position:fixed;right:16px;bottom:18px;background:#25D366;width:64px;height:64px;border-radius:999px;display:grid;place-items:center;box-shadow:0 3px 2px rgba(1, 4, 12, 1);border: 2px solid rgba(255, 255, 255, 1);z-index:80">
@@ -166,6 +300,46 @@
       });
     }, {threshold:0.18});
     cards.forEach(c=> io.observe(c));
+  });
+  </script>
+  <script>
+  // Animated counters for enrollments
+  document.addEventListener('DOMContentLoaded', function(){
+    function animateCounter(el, target, duration){
+      let start = 0; const stepTime = Math.max(16, duration / target);
+      const increment = Math.ceil(target / (duration / stepTime));
+      const id = setInterval(()=>{
+        start += increment;
+        if(start >= target){ el.textContent = target; clearInterval(id); }
+        else el.textContent = start;
+      }, stepTime);
+    }
+    const w = document.getElementById('weekCount');
+    const m = document.getElementById('monthCount');
+    const y = document.getElementById('yearCount');
+    if(w && m && y){
+      // start after small delay for effect
+      setTimeout(()=>{ animateCounter(w, +w.dataset.target || 34, 1600); }, 400);
+      setTimeout(()=>{ animateCounter(m, +m.dataset.target || 128, 2000); }, 800);
+      setTimeout(()=>{ animateCounter(y, +y.dataset.target || 1024, 2600); }, 1200);
+    }
+
+    // Form submission (basic)
+    const form = document.getElementById('enrollForm');
+    if(form){
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const fd = new FormData(form);
+        // basic validation
+        if(!fd.get('fullname') || !fd.get('phone') || !fd.get('email') || !fd.get('course')){
+          alert('Please fill required fields (name, phone, email, course).');
+          return;
+        }
+        // simulate submit
+        alert('Thanks, ' + fd.get('fullname') + '! We received your request. Our team will contact you.');
+        form.reset();
+      });
+    }
   });
   </script>
 </body>
