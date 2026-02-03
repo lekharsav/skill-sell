@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Login — BBC Engineering Consultancy</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* ================= ADMIN LOGIN ================= */
+
+    body {
+      min-height:100vh;
+      background:
+        linear-gradient(rgba(2,8,20,.75),rgba(2,8,20,.65)),
+        url('../aa.jpg') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:Inter,sans-serif;
+    }
+
+    .login-card {
+      background:#fff;
+      width:100%;
+      max-width:420px;
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 30px 80px rgba(0,0,0,.35);
+    }
+
+    .login-brand {
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:30px;
+    }
+
+    .login-brand .logo-mark {
+      background:#021428;
+      color:#fff;
+      font-weight:900;
+    }
+
+    .login-brand h2 {
+      font-family:Poppins,sans-serif;
+      font-size:22px;
+      font-weight:800;
+      margin:0;
+      color:#021428;
+    }
+
+    .login-brand span {
+      display:block;
+      font-size:12px;
+      color:#64748b;
+      font-weight:600;
+    }
+
+    .login-card h3 {
+      font-size:26px;
+      font-weight:800;
+      margin-bottom:6px;
+      color:#021428;
+    }
+
+    .login-card p {
+      font-size:14px;
+      color:#475569;
+      margin-bottom:26px;
+    }
+
+    .login-form input {
+      width:100%;
+      padding:14px 14px;
+      border-radius:10px;
+      border:1px solid #dfe7fa;
+      font-size:14px;
+      margin-bottom:14px;
+    }
+
+    .login-form input:focus {
+      outline:none;
+      border-color:#2563eb;
+      box-shadow:0 0 0 2px rgba(37,99,235,.15);
+    }
+
+    .login-btn {
+      width:100%;
+      padding:14px;
+      border-radius:10px;
+      border:none;
+      background:#021428;
+      color:#fff;
+      font-weight:800;
+      font-size:15px;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    .login-btn:hover {
+      background:#031c3a;
+      transform:translateY(-2px);
+    }
+
+    .login-footer {
+      margin-top:20px;
+      font-size:12px;
+      text-align:center;
+      color:#64748b;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-card">
+
+    <!-- BRAND -->
+    <div class="login-brand">
+      <div class="logo-mark">BBC</div>
+      <div>
+        <h2>Admin Panel</h2>
+        <span>Engineering Consultancy Pvt. Ltd.</span>
+      </div>
+    </div>
+
+    <!-- LOGIN -->
+    <h3>Administrator Login</h3>
+    <p>Authorized access only. Please sign in to continue.</p>
+
+    <form class="login-form" onsubmit="login(event)">
+      <input type="email" placeholder="Admin Email" required>
+      <input type="password" placeholder="Password" required>
+
+      <button class="login-btn" type="submit">
+        Sign In
+      </button>
+    </form>
+
+    <div class="login-footer">
+      © 2025 BBC Engineering Consultancy Pvt. Ltd.
+    </div>
+
+  </div>
+
+<script>
+  function login(e){
+    e.preventDefault();
+    // TEMPORARY: frontend redirect
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>

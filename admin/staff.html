@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Staff Management — Admin | BBC Engineering Consultancy</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    body { background:#f6f9ff; }
+
+    .admin-wrap { padding:40px 0; }
+
+    .page-title {
+      font-family:Poppins,sans-serif;
+      font-size:32px;
+      font-weight:800;
+      color:#021428;
+      margin-bottom:6px;
+    }
+
+    .page-sub {
+      font-size:14px;
+      color:#475569;
+      margin-bottom:30px;
+    }
+
+    /* ACTION BAR */
+    .action-bar {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:20px;
+    }
+
+    .add-btn {
+      padding:10px 16px;
+      border-radius:10px;
+      background:#021428;
+      color:#fff;
+      font-size:13px;
+      font-weight:700;
+      border:none;
+      cursor:pointer;
+    }
+
+    /* TABLE */
+    .table-box {
+      background:#fff;
+      border-radius:16px;
+      box-shadow:0 12px 30px rgba(2,8,20,.08);
+      overflow:hidden;
+    }
+
+    table {
+      width:100%;
+      border-collapse:collapse;
+      font-size:14px;
+    }
+
+    thead {
+      background:#021428;
+      color:#fff;
+    }
+
+    th, td {
+      padding:14px 16px;
+      text-align:left;
+    }
+
+    tbody tr {
+      border-bottom:1px solid #eef2ff;
+    }
+
+    tbody tr:hover {
+      background:#f8fbff;
+    }
+
+    .staff-photo {
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid #e5e7eb;
+    }
+
+    .status {
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .active { background:#dcfce7; color:#166534; }
+    .inactive { background:#fee2e2; color:#991b1b; }
+
+    .action-btn {
+      padding:6px 10px;
+      font-size:12px;
+      border-radius:8px;
+      border:none;
+      cursor:pointer;
+      font-weight:700;
+      margin-right:6px;
+    }
+
+    .edit { background:#fef3c7; color:#92400e; }
+    .delete { background:#fee2e2; color:#991b1b; }
+
+    /* MOBILE */
+    @media(max-width:768px){
+      table, thead, tbody, th, td, tr { display:block; }
+      thead { display:none; }
+
+      tbody tr {
+        padding:14px;
+        border-bottom:1px solid #e5e7eb;
+      }
+
+      td {
+        padding:8px 0;
+      }
+
+      td::before {
+        content:attr(data-label);
+        font-weight:700;
+        display:block;
+        color:#64748b;
+        font-size:12px;
+        margin-bottom:4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= ADMIN NAVBAR ================= -->
+<header class="site-nav">
+  <div class="container nav-inner">
+
+    <!-- Logo -->
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="logo-mark">BBC</div>
+      <div style="color:#fff;font-weight:700;font-size:13px">
+        Admin Panel
+      </div>
+    </div>
+
+    <!-- Admin Navigation -->
+    <nav class="primary">
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="valuation-requests.html">Valuation Requests</a>
+      <a href="services.html">Services</a>
+      <a href="staff.html">Staff</a>
+      <a href="clients.html">Reviews & Clients</a>
+      <a href="content.html">FAQ & Blog</a>
+    </nav>
+
+    <!-- Profile -->
+    <div class="nav-right">
+      <button class="profile-btn" aria-label="Admin Profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M12 12c2.761 0 5-2.462 5-5.5S14.761 1 12 1 7 3.462 7 6.5 9.239 12 12 12Zm0 2c-4.418 0-8 2.239-8 5v2h16v-2c0-2.761-3.582-5-8-5Z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+<!-- ================= CONTENT ================= -->
+<main class="container admin-wrap">
+
+  <h1 class="page-title">Staff Management</h1>
+  <p class="page-sub">Manage engineers, supervisors, and office staff displayed on the website</p>
+
+  <div class="action-bar">
+    <div></div>
+    <button class="add-btn">+ Add Staff Member</button>
+  </div>
+
+  <div class="table-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Photo</th>
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td data-label="Photo">
+            <img src="../aa.jpg" class="staff-photo" alt="">
+          </td>
+          <td data-label="Name">Er. Dhiraj Bhatta</td>
+          <td data-label="Designation">Site Engineer</td>
+          <td data-label="Phone">9864750443</td>
+          <td data-label="Email">—</td>
+          <td data-label="Status">
+            <span class="status active">Visible</span>
+          </td>
+          <td data-label="Actions">
+            <button class="action-btn edit">Edit</button>
+            <button class="action-btn delete">Delete</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Photo">
+            <img src="../ab.jpg" class="staff-photo" alt="">
+          </td>
+          <td data-label="Name">Er. Hari Chaudhary</td>
+          <td data-label="Designation">Valuation Engineer</td>
+          <td data-label="Phone">9869702720</td>
+          <td data-label="Email">—</td>
+          <td data-label="Status">
+            <span class="status active">Visible</span>
+          </td>
+          <td data-label="Actions">
+            <button class="action-btn edit">Edit</button>
+            <button class="action-btn delete">Delete</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Photo">
+            <img src="../bb.jpg" class="staff-photo" alt="">
+          </td>
+          <td data-label="Name">Mr. Bijay Chaudhary</td>
+          <td data-label="Designation">Office Assistant</td>
+          <td data-label="Phone">9863107689</td>
+          <td data-label="Email">—</td>
+          <td data-label="Status">
+            <span class="status inactive">Hidden</span>
+          </td>
+          <td data-label="Actions">
+            <button class="action-btn edit">Edit</button>
+            <button class="action-btn delete">Delete</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+</body>
+</html>

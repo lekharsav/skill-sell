@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Dashboard — BBC Engineering Consultancy</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* ================= ADMIN DASHBOARD ================= */
+
+    body {
+      background:#f6f9ff;
+    }
+
+    .admin-wrap {
+      padding:40px 0;
+    }
+
+    .admin-title {
+      font-family:Poppins,sans-serif;
+      font-size:34px;
+      font-weight:800;
+      color:#021428;
+      margin-bottom:6px;
+    }
+
+    .admin-sub {
+      color:#475569;
+      font-size:15px;
+      margin-bottom:30px;
+    }
+
+    /* STAT CARDS */
+    .stat-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:24px;
+      margin-bottom:40px;
+    }
+
+    .stat-card {
+      background:#fff;
+      border-radius:18px;
+      padding:26px;
+      box-shadow:0 10px 30px rgba(2,8,20,.08);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .stat-card::after {
+      content:'';
+      position:absolute;
+      right:-30px;
+      top:-30px;
+      width:120px;
+      height:120px;
+      background:linear-gradient(135deg,#00D4FF,#635BFF);
+      opacity:.08;
+      border-radius:50%;
+    }
+
+    .stat-label {
+      font-size:13px;
+      font-weight:700;
+      color:#64748b;
+      text-transform:uppercase;
+      letter-spacing:.4px;
+    }
+
+    .stat-value {
+      font-size:36px;
+      font-weight:800;
+      color:#021428;
+      margin-top:8px;
+    }
+
+    /* QUICK ACTIONS */
+    .quick-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+    }
+
+    .quick-card {
+      background:#fff;
+      border-radius:18px;
+      padding:30px;
+      box-shadow:0 10px 30px rgba(2,8,20,.08);
+      transition:.3s;
+      cursor:pointer;
+    }
+
+    .quick-card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 20px 40px rgba(2,8,20,.12);
+    }
+
+    .quick-card h4 {
+      font-weight:800;
+      color:#021428;
+      margin-bottom:10px;
+    }
+
+    .quick-card p {
+      font-size:14px;
+      color:#475569;
+      line-height:1.6;
+    }
+
+    @media(max-width:1024px){
+      .stat-grid { grid-template-columns:1fr 1fr; }
+      .quick-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= ADMIN NAVBAR ================= -->
+<header class="site-nav">
+  <div class="container nav-inner">
+
+    <!-- Logo -->
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="logo-mark">BBC</div>
+      <div style="color:#fff;font-weight:700;font-size:13px">
+        Admin Panel
+      </div>
+    </div>
+
+    <!-- Admin Navigation -->
+    <nav class="primary">
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="valuation-requests.html">Valuation Requests</a>
+      <a href="services.html">Services</a>
+      <a href="staff.html">Staff</a>
+      <a href="clients.html">Reviews & Clients</a>
+      <a href="content.html">FAQ & Blog</a>
+    </nav>
+
+    <!-- Profile -->
+    <div class="nav-right">
+      <button class="profile-btn" aria-label="Admin Profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M12 12c2.761 0 5-2.462 5-5.5S14.761 1 12 1 7 3.462 7 6.5 9.239 12 12 12Zm0 2c-4.418 0-8 2.239-8 5v2h16v-2c0-2.761-3.582-5-8-5Z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= DASHBOARD ================= -->
+<main class="container admin-wrap">
+
+  <h1 class="admin-title">Dashboard</h1>
+  <p class="admin-sub">Overview of valuation requests, reviews and business activity</p>
+
+  <!-- STATS -->
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-label">Valuation Requests</div>
+      <div class="stat-value">128</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-label">Active Services</div>
+      <div class="stat-value">14</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-label">Client Reviews</div>
+      <div class="stat-value">56</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-label">Staff Members</div>
+      <div class="stat-value">9</div>
+    </div>
+  </div>
+
+  <!-- QUICK ACTIONS -->
+  <div class="quick-grid">
+
+    <div class="quick-card" onclick="location.href='valuation-requests.html'">
+      <h4>📑 New Valuation Requests</h4>
+      <p>View and manage incoming valuation and site inspection requests.</p>
+    </div>
+
+    <div class="quick-card" onclick="location.href='clients.html'">
+      <h4>⭐ Reviews & Clients</h4>
+      <p>Manage customer reviews and companies you have worked with.</p>
+    </div>
+
+    <div class="quick-card" onclick="location.href='content.html'">
+      <h4>📰 FAQ & Blog Content</h4>
+      <p>Update FAQs and publish blog posts for SEO and client education.</p>
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+</html>

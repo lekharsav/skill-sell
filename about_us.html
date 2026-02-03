@@ -844,11 +844,10 @@
         font-size: 44px;
     }
     
-    .values-grid {
-        grid-template-columns: 1fr
-    .team-avatar {
-        height: 240px;
-    }
+   .values-grid {
+    grid-template-columns: 1fr;
+}
+
     
     .mv-card h3 {
         font-size: 24px;
@@ -1025,7 +1024,6 @@
     }
 }
     </style>
-    </style>
 </head>
 <body>
    <header class="site-nav" role="banner">
@@ -1039,12 +1037,12 @@
     </div>
 
     <!-- Desktop Navigation -->
-    <nav class="primary" role="navigation" aria-label="primary">
-      <a href="index.html">Home</a>
-      <a href="cource.html">Courses</a>
+ <nav class="primary" role="navigation" aria-label="primary">
+     <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
       <a href="about_us.html">About us</a>
-      <a href="toppers.html">Toppers</a>
-      <a href="faq.html">FAQ</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact_us.html">Contact Us</a>
     </nav>
 
     <!-- Right: CTA + Profile + Hamburger -->
@@ -1069,12 +1067,12 @@
     </div>
   </div>
    <div class="mobile-dropdown" id="mobileDropdown">
-      <nav class="mobile-nav">
+        <nav class="mobile-nav">
         <a href="index.html" class="mobile-nav-link">Home</a>
-        <a href="cource.html" class="mobile-nav-link">Courses</a>
+        <a href="project.html" class="mobile-nav-link">Projects</a>
         <a href="about_us.html" class="mobile-nav-link">about us</a>
-        <a href="toppers.html" class="mobile-nav-link">Toppers</a>
-        <a href="faq.html" class="mobile-nav-link">FAQ</a>
+        <a href="reviews.html" class="mobile-nav-link">Reviews</a>
+        <a href="contact_us.html" class="mobile-nav-link">Contact Us</a>
         <button class="mobile-dropdown-cta" onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">Browse Architecture</button>
       </nav>
     </div>
@@ -1084,32 +1082,38 @@
     <main>
         <!-- Hero Section -->
         <section class="about-hero">
-            <div class="container">
-                <div class="about-hero-content">
-                    <div class="badge">About BBC</div>
-                    <h1>Engineering Excellence <span class="highlight">Since 2010</span></h1>
-                    <p class="lead">Transforming education through innovative engineering solutions and cutting-edge technology</p>
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-number">5000   +</div>
-                            <div class="stat-label">Students Trained</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">150+</div>
-                            <div class="stat-label">Industry Partners</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">98%</div>
-                            <div class="stat-label">Success Rate</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">12+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="container">
+    <div class="about-hero-content">
+      <div class="badge">About BBC</div>
+      <h1>Trusted Engineering & Valuation <span class="highlight">Since 2010</span></h1>
+      <p class="lead">
+        BBC Engineering Consultancy Pvt. Ltd. is a professional engineering and
+        property valuation firm delivering NRB-compliant valuation, design,
+        and supervision services across Nepal.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">1000+</div>
+          <div class="stat-label">Valuation Reports</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Bank Clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">NRB Compliance</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
          <div class="auth-overlay" id="authOverlay">
@@ -1127,9 +1131,7 @@
     </div>
 
     <!-- Social login -->
-    <button class="auth-social google">Google</button>
-    <button class="auth-social facebook">Facebook</button>
-    <button class="auth-social twitter">X</button>
+
 
     <a href="#" class="forgot">Forgot password?</a>
 
@@ -1138,207 +1140,268 @@
 
 
         <!-- Our Story -->
-        <section class="story-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Journey</h2>
-                    <p>From a small initiative to a leading engineering consultancy</p>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-year">2010</div>
-                        <div class="timeline-content">
-                            <h3>Foundation</h3>
-                            <p>Started with a vision to bridge the gap between academia and industry in engineering education.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2014</div>
-                        <div class="timeline-content">
-                            <h3>Expansion</h3>
-                            <p>Expanded services to include specialized training programs and industry collaborations.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2018</div>
-                        <div class="timeline-content">
-                            <h3>Digital Transformation</h3>
-                            <p>Launched online learning platform, reaching students across Nepal and neighboring regions.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2023</div>
-                        <div class="timeline-content">
-                            <h3>Global Recognition</h3>
-                            <p>Awarded "Best Engineering Education Provider" at the National Education Awards.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <section class="story-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Journey</h2>
+      <p>Our growth as a trusted engineering & valuation consultancy</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2010</div>
+        <div class="timeline-content">
+          <h3>Company Foundation</h3>
+          <p>
+            BBC Engineering Consultancy Pvt. Ltd. was established to provide
+            professional engineering and property valuation services in Nepal.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2014</div>
+        <div class="timeline-content">
+          <h3>Expansion of Valuation Services</h3>
+          <p>
+            Expanded valuation services for banks, financial institutions,
+            and legal purposes in compliance with NRB guidelines.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2018</div>
+        <div class="timeline-content">
+          <h3>Design & Supervision Services</h3>
+          <p>
+            Introduced architectural design, structural design, and
+            site supervision services for residential and commercial projects.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <h3>Institutional Recognition</h3>
+          <p>
+            Trusted by banks, government offices, embassies,
+            and individual clients across Sudurpaschim Province and beyond.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <!-- Mission & Vision -->
         <section class="mission-vision">
-            <div class="container">
-                <div class="mv-grid">
-                    <div class="mv-card mission">
-                        <div class="mv-icon">🎯</div>
-                        <h3>Our Mission</h3>
-                        <p>To empower aspiring engineers with practical skills, industry knowledge, and innovative thinking that transforms them into industry-ready professionals.</p>
-                    </div>
-                    <div class="mv-card vision">
-                        <div class="mv-icon">🚀</div>
-                        <h3>Our Vision</h3>
-                        <p>To become Nepal's premier engineering education hub, setting standards for excellence and producing world-class engineering talent.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="container">
+    <div class="mv-grid">
+      <div class="mv-card mission">
+        <div class="mv-icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>
+          To deliver accurate, transparent, and NRB-compliant
+          valuation and engineering services that support sound
+          financial and construction decisions.
+        </p>
+      </div>
+
+      <div class="mv-card vision">
+        <div class="mv-icon">🚀</div>
+        <h3>Our Vision</h3>
+        <p>
+          To be a leading and trusted engineering consultancy in Nepal,
+          recognized for professionalism, integrity, and technical excellence.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <!-- Leadership Team -->
-        <section class="team-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Leadership Team</h2>
-                    <p>Meet the visionaries behind BBC's success</p>
-                </div>
-                <div class="team-grid">
-                    <div class="team-card">
-                        <div class="team-avatar">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Founder">
-                            <div class="team-social">
-                                <a href="#" class="social-link">in</a>
-                                <a href="#" class="social-link">tw</a>
-                                <a href="#" class="social-link">fb</a>
-                            </div>
-                        </div>
-                        <div class="team-info">
-                            <h4>Krishna Bhandari</h4>
-                            <p class="team-role">Founder & CEO</p>
-                            <p class="team-bio">20+ years in engineering education and industry consultation</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-avatar">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Academic Head">
-                            <div class="team-social">
-                                <a href="#" class="social-link">in</a>
-                                <a href="#" class="social-link">tw</a>
-                                <a href="#" class="social-link">fb</a>
-                            </div>
-                        </div>
-                        <div class="team-info">
-                            <h4>Dr. Anjali Sharma</h4>
-                            <p class="team-role">Academic Director</p>
-                            <p class="team-bio">PhD in Engineering Education, Curriculum Development Expert</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-avatar">
-                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=800&auto=format&fit=crop" alt="Technical Head">
-                            <div class="team-social">
-                                <a href="#" class="social-link">in</a>
-                                <a href="#" class="social-link">tw</a>
-                                <a href="#" class="social-link">fb</a>
-                            </div>
-                        </div>
-                        <div class="team-info">
-                            <h4>Rajesh Thapa</h4>
-                            <p class="team-role">Technical Director</p>
-                            <p class="team-bio">Former Lead Engineer at multinational corporations</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <section class="team-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Leadership Team</h2>
+      <p>Experienced professionals leading BBC Engineering Consultancy</p>
+    </div>
+
+    <div class="team-grid">
+
+      <!-- Leader 1 -->
+      <div class="team-card">
+        <div class="team-avatar">
+          <img src="unnamed.jpg" alt="Founder & CEO">
+          <div class="team-social">
+            <a href="#" class="social-link">in</a>
+            <a href="#" class="social-link">fb</a>
+            <a href="#" class="social-link">tw</a>
+          </div>
+        </div>
+        <div class="team-info">
+          <h4>Er. Krishna Gopal Bhandari</h4>
+          <p class="team-role">Founder / CEO / Managing Director</p>
+          <p class="team-bio">
+            Registered valuer with extensive experience in property valuation,
+            engineering design, and bank-compliant reporting.
+          </p>
+        </div>
+      </div>
+
+      <!-- Leader 2 -->
+      <div class="team-card">
+        <div class="team-avatar">
+          <img src="unnamed.jpg" alt="Shareholder">
+          <div class="team-social">
+            <a href="#" class="social-link">in</a>
+            <a href="#" class="social-link">fb</a>
+            <a href="#" class="social-link">tw</a>
+          </div>
+        </div>
+        <div class="team-info">
+          <h4>Er. Ashish Bhandari</h4>
+          <p class="team-role">Shareholder</p>
+          <p class="team-bio">
+            Professional civil engineer contributing to technical planning,
+            architectural coordination, and project supervision.
+          </p>
+        </div>
+      </div>
+
+      <!-- Leader 3 -->
+      <div class="team-card">
+        <div class="team-avatar">
+          <img src="unnamed.jpg" alt="Shareholder">
+          <div class="team-social">
+            <a href="#" class="social-link">in</a>
+            <a href="#" class="social-link">fb</a>
+            <a href="#" class="social-link">tw</a>
+          </div>
+        </div>
+        <div class="team-info">
+          <h4>Er. Kamal Raj Ojha</h4>
+          <p class="team-role">Shareholder</p>
+          <p class="team-bio">
+            Experienced in civil engineering consultancy and infrastructure
+            supervision projects across Nepal.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
         <!-- Core Values -->
         <section class="values-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Core Values</h2>
-                    <p>The principles that guide everything we do</p>
-                </div>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <div class="value-icon">💡</div>
-                        <h4>Innovation</h4>
-                        <p>Constantly evolving our methods to stay ahead in engineering education</p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">🎓</div>
-                        <h4>Excellence</h4>
-                        <p>Setting high standards in teaching and learning outcomes</p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">🤝</div>
-                        <h4>Integrity</h4>
-                        <p>Honest, transparent, and ethical in all our dealings</p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">🌍</div>
-                        <h4>Impact</h4>
-                        <p>Creating positive change in students' lives and the industry</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Core Values</h2>
+      <p>The principles that guide our professional practice</p>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">⚖️</div>
+        <h4>Accuracy</h4>
+        <p>Precise valuation and technical assessment based on verified data.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">📜</div>
+        <h4>Compliance</h4>
+        <p>Strict adherence to NRB, bank, and legal guidelines.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h4>Integrity</h4>
+        <p>Transparent, ethical, and unbiased professional service.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">⏱</div>
+        <h4>Timeliness</h4>
+        <p>Fast turnaround without compromising quality or accuracy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <!-- Why Choose Us Section -->
         <section class="why-choose-us">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Why Choose BBC?</h2>
-                    <p>We stand out from the crowd with our commitment to excellence and innovation</p>
-                </div>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">👨‍🏫</div>
-                        <h4>Expert Faculty</h4>
-                        <p>Learn from industry professionals with 15+ years of experience in their respective fields</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">💻</div>
-                        <h4>Modern Infrastructure</h4>
-                        <p>State-of-the-art labs and facilities equipped with latest engineering software and tools</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">📚</div>
-                        <h4>Comprehensive Curriculum</h4>
-                        <p>Industry-aligned courses covering theoretical knowledge and practical application</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">🤝</div>
-                        <h4>Industry Partnerships</h4>
-                        <p>Strong connections with leading companies ensuring internships and job placements</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">🏆</div>
-                        <h4>Proven Track Record</h4>
-                        <p>98% placement rate with alumni working at top multinational companies</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">🌐</div>
-                        <h4>Online & Offline</h4>
-                        <p>Flexible learning options - attend classes online or at our physical centers</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Choose BBC?</h2>
+      <p>Professional engineering consultancy you can rely on</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🏦</div>
+        <h4>Bank & NRB Approved</h4>
+        <p>Valuation reports accepted by banks and financial institutions.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">📍</div>
+        <h4>Nepal Market Expertise</h4>
+        <p>Strong understanding of local land, construction, and market trends.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">📑</div>
+        <h4>Complete Documentation</h4>
+        <p>From valuation to drawings, approvals, and supervision.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">⚙️</div>
+        <h4>End-to-End Services</h4>
+        <p>Valuation, design, and supervision under one consultancy.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">⚖️</div>
+        <h4>Legal Reliability</h4>
+        <p>Suitable for banking, legal, embassy, and official use.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">⏱</div>
+        <h4>Fast Turnaround</h4>
+        <p>Timely delivery with professional accuracy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <!-- CTA Section -->
         <section class="about-cta">
-            <div class="container">
-                <div class="cta-card">
-                    <h2>Join Our Engineering Revolution</h2>
-                    <p>Be part of Nepal's leading engineering education movement</p>
-                    <div class="cta-buttons">
-                        <a href="#courses" class="btn-primary">Explore Courses</a>
-                        <a href="#contact" class="btn-outline">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="container">
+    <div class="cta-card">
+      <h2>Need Professional Valuation or Engineering Services?</h2>
+      <p>
+        Contact BBC Engineering Consultancy Pvt. Ltd. for reliable,
+        accurate, and compliant engineering solutions.
+      </p>
+      <div class="cta-buttons">
+        <a href="contact_us.html" class="btn-primary">Request Valuation</a>
+        <a href="contact_us.html" class="btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
 
     <a href="https://wa.me/9779858422178" target="_blank" style="position:fixed;right:16px;bottom:18px;background:#25D366;width:64px;height:64px;border-radius:999px;display:grid;place-items:center;box-shadow:0 3px 2px rgba(1, 4, 12, 1);border: 2px solid rgba(255, 255, 255, 1);z-index:80">
@@ -1353,7 +1416,8 @@
                     <div class="logo-mark">BBC</div>
                     <h3>Engineering Consultantancy Pvt.Ltd</h3>
                 </div>
-                <p class="footer-tagline">Empowering learners with cutting-edge education</p>
+                <p class="footer-tagline">Empowering <p class="footer-tagline">Professional Engineering & Property Valuation Consultancy</p>
+ with cutting-edge education</p>
                 <div class="footer-copyright">&copy; <strong>BBC</strong> — 2025 • All rights reserved</div>
             </div>
             
@@ -1526,25 +1590,6 @@ if (mobileMenuBtn && mobileDropdown) {
     });
 }
 
-// Team card hover effect
-const teamCards = document.querySelectorAll('.team-card');
-teamCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        const social = this.querySelector('.team-social');
-        if (social) {
-            social.style.opacity = '1';
-            social.style.transform = 'translateY(0)';
-        }
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        const social = this.querySelector('.team-social');
-        if (social) {
-            social.style.opacity = '0';
-            social.style.transform = 'translateY(10px)';
-        }
-    });
-});
 </script>
 
 </body>

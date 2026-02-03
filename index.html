@@ -13,12 +13,6 @@
 </head>
 <body>
 
-  <!-- Floating decorative shapes (replace with icons as needed) -->
-  <div class="floating-shapes" aria-hidden="true">
-    <img class="shape float-a" src="https://via.placeholder.com/56/635BFF/ffffff?text=★" alt="">
-    <img class="shape float-b" src="https://via.placeholder.com/56/00D4FF/ffffff?text=✦" alt="">
-    <img class="shape float-c" src="https://via.placeholder.com/56/7C4DFF/ffffff?text=⚡" alt="">
-  </div>
 
   <!-- NAV -->
 <header class="site-nav" role="banner">
@@ -32,12 +26,12 @@
     </div>
 
     <!-- Desktop Navigation -->
-    <nav class="primary" role="navigation" aria-label="primary">
-      <a href="index.html">Home</a>
-      <a href="cource.html">Courses</a>
+ <nav class="primary" role="navigation" aria-label="primary">
+       <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
       <a href="about_us.html">About us</a>
-      <a href="toppers.html">Toppers</a>
-      <a href="faq.html">FAQ</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact_us.html">Contact Us</a>
     </nav>
 
     <!-- Right: CTA + Profile + Hamburger -->
@@ -65,12 +59,12 @@
    
   </div>
    <div class="mobile-dropdown" id="mobileDropdown">
-      <nav class="mobile-nav">
+        <nav class="mobile-nav">
         <a href="index.html" class="mobile-nav-link">Home</a>
-        <a href="cource.html" class="mobile-nav-link">Courses</a>
+        <a href="project.html" class="mobile-nav-link">Projects</a>
         <a href="about_us.html" class="mobile-nav-link">about us</a>
-        <a href="toppers.html" class="mobile-nav-link">Toppers</a>
-        <a href="faq.html" class="mobile-nav-link">FAQ</a>
+        <!--<a href="reviews.html" class="mobile-nav-link">Reviews</a>-->
+        <a href="contact_us.html" class="mobile-nav-link">Contact Us</a>
         <button class="mobile-dropdown-cta" onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">Browse Architecture</button>
       </nav>
     </div>
@@ -83,19 +77,27 @@
         <div class="eyebrow">Trusted by postal & tech pros • BBC verified</div>
 
        <h2 class="hero-title">
-  Level up with <span class="highlight">career-ready</span><br>
-  tech courses that convert.
+  Trusted <span class="highlight">Engineering & Property Valuation</span><br>
+  Services Across Nepal
 </h2>
 
 
-        <p class="lead">BBC Engineering Consultancy Pvt. Ltd. is a multidisciplinary engineering and architectural consultancy dedicated to delivering reliable, innovative, and cost-effective solutions for residential, commercial, and infrastructure projects.
 
-With a strong foundation in architectural design, civil engineering consultancy, and property services, we assist clients at every stage — from concept planning and approvals to valuation, documentation, and execution support.</p>
+        <p class="lead">
+BBC Engineering Consultancy Pvt. Ltd. is a registered engineering and property valuation firm providing
+accurate, transparent, and NRB-compliant valuation services across Nepal.
+
+We specialize in residential, commercial, land, and bank valuation, along with architectural design,
+structural design, and professional site supervision services. Our team supports clients, banks, and
+institutions from documentation and inspection to final valuation and execution guidance.
+</p>
+
 
         <div class="hero-ctas" style="align-items:center">
-          <button class="btn-primary" id="ctaEnroll">Get Started — Enroll</button>
-          <button class="btn-outline" id="ctaDemo">See demo</button>
-          <div style="margin-left:12px" class="kpi-pill">32k+ students</div>
+         <button class="btn-primary" id="ctaEnroll">Request Valuation</button>
+<button class="btn-outline" id="ctaDemo">View Our Services</button>
+<div style="margin-left:12px" class="kpi-pill">Bank & Legal Approved</div>
+
         </div>
 
         <!-- ORDER TRACK PATH -->
@@ -165,9 +167,7 @@ With a strong foundation in architectural design, civil engineering consultancy,
     </div>
 
     <!-- Social login -->
-    <button class="auth-social google">Google</button>
-    <button class="auth-social facebook">Facebook</button>
-    <button class="auth-social twitter">X</button>
+
 
     <a href="#" class="forgot">Forgot password?</a>
 
@@ -182,12 +182,14 @@ With a strong foundation in architectural design, civil engineering consultancy,
     <div class="reach-card">
       <div class="badge">Our Reach</div>
 
-      <h3>Trusted by 12,000+ learners across Nepal</h3>
+<h3>Trusted by Banks, Institutions & Individuals Across Nepal</h3>
 
       <p class="reach-desc">
-        BBC helps working professionals prepare with bite-sized lessons, live doubt sessions and placement-focused projects.
-        Our graduates land promotions and jobs in government and private sectors.
-      </p>
+BBC Engineering Consultancy Pvt. Ltd. is trusted by leading banks, financial institutions,
+government offices, corporate firms, and individual clients for accurate valuation,
+professional design, and reliable supervision services.
+</p>
+
 
   </div>
 </section>
@@ -245,89 +247,126 @@ With a strong foundation in architectural design, civil engineering consultancy,
     <div class="container">
      <div class="tabs tabs-heading">
   <div class="tabs-card">
-    <h3 class="tabs-title">Crack Departmental & Tech Exams</h3>
-    <p class="tabs-subtitle">
-      Hands-on courses, short focused modules and mentorship. Designed for working professionals who need practical outcomes fast.
-    </p>
+    <h3 class="tabs-title">Our Professional Services</h3>
+<p class="tabs-subtitle">
+Comprehensive property valuation, engineering design, and site supervision services
+delivered with accuracy, compliance, and professional integrity.
+</p>
+
   </div>
 </div>
 
       <div style="margin-top:20px" class="tabs" role="tablist" aria-label="course categories">
-        <button class="tab active" data-cat="all">All</button>
-        <button class="tab" data-cat="full">Full Courses</button>
-        <button class="tab" data-cat="combo">Combo</button>
-        <button class="tab" data-cat="mock">Mocks</button>
+        <button class="tab active" data-cat="all">All Services</button>
+<button class="tab" data-cat="full">Valuation</button>
+<button class="tab" data-cat="combo">Design & Drawing</button>
+<button class="tab" data-cat="mock">Site Supervision</button>
+
       </div>
 
       <div class="course-grid" style="margin-top:24px">
-        <!-- card 1 -->
-        <article class="course-card" data-cat="full" tabindex="0" aria-label="Inspector course">
-          <div class="course-thumb"><img src="police.png" alt=""></div>
-          <h4 class="course-title">🏗 Building Architectural Design</h4>
-          <div class="course-meta">
-            <div style="color:#021428">100+ lectures • Mocks</div>
-            
-          </div>
-        </article>
 
-        <!-- card 2 -->
-        <article class="course-card" data-cat="full" tabindex="0">
-          <div class="course-thumb"><img src="gds.jpg" alt=""></div>
-          <h4 class="course-title">🎥 3D Video Animation & Modelling</h4>
-          <div class="course-meta">
-            <div style="color:#021428">Mini projects • 30 videos</div>
-            
-          </div>
-        </article>
+  <!-- PROPERTY VALUATION -->
+  <article class="course-card" data-cat="full" tabindex="0">
+    <div class="course-thumb"><img src="pasa.jpg" alt=""></div>
+    <h4 class="course-title">🏠 Residential Property Valuation</h4>
+    <div class="course-meta"><div style="color:#021428">Complete valuation reports</div></div>
+  </article>
 
-        <!-- card 3 -->
-        <article class="course-card" data-cat="combo" tabindex="0">
-          <div class="course-thumb"><img src="pos.jpg" alt=""></div>
-          <h4 class="course-title">📐 Quantity Survey</h4>
-          <div class="course-meta">
-            <div style="color:#021428">Mocks • Notes • Live Doubt</div>
-           
-          </div>
-        </article>
+  <article class="course-card" data-cat="full" tabindex="0">
+    <div class="course-thumb"><img src="aa.jpg" alt=""></div>
+    <h4 class="course-title">🏢 Commercial Property Valuation</h4>
+    <div class="course-meta"><div style="color:#021428">Shops, offices & complexes</div></div>
+  </article>
 
-        <!-- card 4 -->
-        <article class="course-card" data-cat="mock" tabindex="0">
-          <div class="course-thumb"><img src="poo.jpg" alt=""></div>
-          <h4 class="course-title">🏛 Building Plan Pass</h4>
-          <div class="course-meta">
-            <div style="color:#021428">Timed mocks & analytics</div>
-            
-          </div>
-        </article>
+  <article class="course-card" data-cat="full" tabindex="0">
+    <div class="course-thumb"><img src="ab.jpg" alt=""></div>
+    <h4 class="course-title">🌾 Land Valuation</h4>
+    <div class="course-meta"><div style="color:#021428">Legal & bank-approved</div></div>
+  </article>
 
-        <!-- card 5 -->
-        <article class="course-card" data-cat="full" tabindex="0">
-          <div class="course-thumb"><img src="pasa.jpg" alt=""></div>
-          <h4 class="course-title">🏠 Property Valuation</h4>
-          <div class="course-meta">
-            <div style="color:#021428">Video lectures & notes</div>
-            
-          </div>
-        </article>
+  <article class="course-card" data-cat="full" tabindex="0">
+    <div class="course-thumb"><img src="ba.jpg" alt=""></div>
+    <h4 class="course-title">🏗 Under-Construction Property Valuation</h4>
+    <div class="course-meta"><div style="color:#021428">Stage-wise valuation</div></div>
+  </article>
 
-        <!-- card 6 -->
-        <article class="course-card" data-cat="combo" tabindex="0">
-          <div class="course-thumb"><img src="ss.png" alt=""></div>
-          <h4 class="course-title">💼 Property Loan Disbursement Paperwork</h4>
-          <div class="course-meta">
-            <div style="color:#021428">All-in-one bundle</div>
-            
-          </div>
-        </article>
+  <article class="course-card" data-cat="full" tabindex="0">
+    <div class="course-thumb"><img src="bb.jpg" alt=""></div>
+    <h4 class="course-title">🏦 Bank & Financial Institution Valuation</h4>
+    <div class="course-meta"><div style="color:#021428">Loan & mortgage purpose</div></div>
+  </article>
 
-          <article class="course-card" data-cat="combo" tabindex="0">
-          <div class="course-thumb"><img src="ss.png" alt=""></div>
-          <h4 class="course-title">🧱 Civil Engineering Consultancy</h4>
-          <div class="course-meta">
-            <div style="color:#021428">All-in-one bundle</div>
-          </div>
-        </article>
-      </div>
+  <article class="course-card" data-cat="full" tabindex="0">
+    <div class="course-thumb"><img src="bc.jpg" alt=""></div>
+    <h4 class="course-title">🏦 Embassy / Family Separation Valuation</h4>
+    <div class="course-meta"><div style="color:#021428">Visa & legal documentation</div></div>
+  </article>
+
+  <!-- DESIGN & DRAWING -->
+  <article class="course-card" data-cat="combo" tabindex="0">
+    <div class="course-thumb"><img src="ca.jpg" alt=""></div>
+    <h4 class="course-title">🏢 Architectural Design</h4>
+    <div class="course-meta"><div style="color:#021428">Concept to approval drawings</div></div>
+  </article>
+
+  <article class="course-card" data-cat="combo" tabindex="0">
+    <div class="course-thumb"><img src="cb.jpg" alt=""></div>
+    <h4 class="course-title">🏢 Structural Design</h4>
+    <div class="course-meta"><div style="color:#021428">Safe & optimized structures</div></div>
+  </article>
+
+  <article class="course-card" data-cat="combo" tabindex="0">
+    <div class="course-thumb"><img src="cd.jpg" alt=""></div>
+    <h4 class="course-title">🏢 Electrical & Sanitation Design</h4>
+    <div class="course-meta"><div style="color:#021428">MEP planning & layouts</div></div>
+  </article>
+
+  <article class="course-card" data-cat="combo" tabindex="0">
+    <div class="course-thumb"><img src="ccd.jpg" alt=""></div>
+    <h4 class="course-title">🎥 Interior Design / 3D / Animation</h4>
+    <div class="course-meta"><div style="color:#021428">Photorealistic visuals</div></div>
+  </article>
+
+  <article class="course-card" data-cat="combo" tabindex="0">
+    <div class="course-thumb"><img src="cdd.jpg" alt=""></div>
+    <h4 class="course-title">🏠 Residential & Commercial Building Design</h4>
+    <div class="course-meta"><div style="color:#021428">Complete building solutions</div></div>
+  </article>
+
+  <article class="course-card" data-cat="combo" tabindex="0">
+    <div class="course-thumb"><img src="da.jpg" alt=""></div>
+    <h4 class="course-title">🌳 Landscaping & Energy Efficient Design</h4>
+    <div class="course-meta"><div style="color:#021428">Sustainable planning</div></div>
+  </article>
+
+  <article class="course-card" data-cat="combo" tabindex="0">
+    <div class="course-thumb"><img src="db.jpg" alt=""></div>
+    <h4 class="course-title">🏛 Religious / Hospital / Hotel Design</h4>
+    <div class="course-meta"><div style="color:#021428">Specialized structures</div></div>
+  </article>
+
+  <article class="course-card" data-cat="combo" tabindex="0">
+    <div class="course-thumb"><img src="gd.jpg" alt=""></div>
+    <h4 class="course-title">🏊 Swimming Pool / Health Club / Spa</h4>
+    <div class="course-meta"><div style="color:#021428">Luxury facility design</div></div>
+  </article>
+
+  <!-- SITE SUPERVISION -->
+  <article class="course-card" data-cat="mock" tabindex="0">
+    <div class="course-thumb"><img src="se.jpg" alt=""></div>
+    <h4 class="course-title">🏗 House & Building Construction Supervision</h4>
+    <div class="course-meta"><div style="color:#021428">Quality & progress control</div></div>
+  </article>
+
+  <article class="course-card" data-cat="mock" tabindex="0">
+    <div class="course-thumb"><img src="sa.jpg" alt=""></div>
+    <h4 class="course-title">🏗 Infrastructure Construction Supervision</h4>
+    <div class="course-meta"><div style="color:#021428">Roads & large projects</div></div>
+  </article>
+
+</div>
+
     </div>
 
     <div class="pagination-wrap">
@@ -344,71 +383,102 @@ With a strong foundation in architectural design, civil engineering consultancy,
   <div class="container">
     <div class="why-head">
       <span class="badge">Why BBC</span>
-      <h3>Master your path to promotion & growth</h3>
+      <h3>Why Choose BBC Engineering Consultancy</h3>
       <p>
-        Project-based learning, micro-lessons, mock interviews and placement
-        assistance — tailored for job promotions and career change.
+        We provide independent, accurate, and NRB-compliant valuation and
+        engineering services trusted by banks, government offices, and
+        individual clients across Nepal.
       </p>
     </div>
 
     <div class="why-grid">
       <div class="why-card">
-        <div class="why-icon">🎯</div>
-        <h4>Targeted Curriculum</h4>
-        <p>Short modules focused on real promotion outcomes.</p>
+        <div class="why-icon">📜</div>
+        <h4>Registered & Compliant</h4>
+        <p>
+          Valuation reports prepared in accordance with Nepal Rastra Bank
+          (NRB) and bank-specific guidelines.
+        </p>
       </div>
 
       <div class="why-card">
-        <div class="why-icon">💡</div>
-        <h4>Live Doubt Sessions</h4>
-        <p>Weekly live Q&A and direct mentor support.</p>
+        <div class="why-icon">🏗</div>
+        <h4>Technical Expertise</h4>
+        <p>
+          Experienced engineers and valuators with strong knowledge of
+          Nepalese construction and property markets.
+        </p>
       </div>
 
       <div class="why-card">
-        <div class="why-icon">📈</div>
-        <h4>Progress Analytics</h4>
-        <p>Track improvements with built-in analytics.</p>
+        <div class="why-icon">⏱</div>
+        <h4>Timely & Reliable Service</h4>
+        <p>
+          Prompt site inspection, documentation review, and delivery of
+          professional reports without delay.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
 
+
   <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <div class="container">
-      <div style="text-align:center">
-        <div class="badge" style="background:linear-gradient(90deg,var(--accent-1),var(--accent-2));display:inline-block;padding:6px 12px;border-radius:12px;color:#021428;font-weight:800">See results</div>
-        <h3 style="margin-top:12px">What Students Say</h3>
+<section class="testimonials">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="badge" style="background:linear-gradient(90deg,var(--accent-1),var(--accent-2));display:inline-block;padding:6px 12px;border-radius:12px;color:#021428;font-weight:800">
+        Client Feedback
+      </div>
+      <h3 style="margin-top:12px">Trusted by Banks, Institutions & Individuals</h3>
+    </div>
+
+    <div class="test-grid" style="margin-top:20px">
+      <div class="testimonial">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://via.placeholder.com/64" style="width:64px;height:64px;border-radius:50%;border:3px solid rgba(255,255,255,0.02)" alt="">
+          <div>
+            <div style="font-weight:800">Bank Officer</div>
+            <div style="color:#ffb400">★★★★★</div>
+          </div>
+        </div>
+        <p style="color:#021428;margin-top:12px">
+          “BBC Engineering Consultancy provides accurate, NRB-compliant valuation
+          reports that we regularly rely on for loan and mortgage processing.”
+        </p>
       </div>
 
-      <div class="test-grid" style="margin-top:20px">
-        <div class="testimonial">
-          <div style="display:flex;gap:12px;align-items:center">
-            <img src="https://via.placeholder.com/64" style="width:64px;height:64px;border-radius:50%;border:3px solid rgba(255,255,255,0.02)" alt="">
-            <div><div style="font-weight:800">Sourabh Shukla</div><div style="color:#ffb400">★★★★★</div></div>
+      <div class="testimonial">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://via.placeholder.com/64" style="width:64px;height:64px;border-radius:50%;border:3px solid rgba(255,255,255,0.02)" alt="">
+          <div>
+            <div style="font-weight:800">Corporate Client</div>
+            <div style="color:#ffb400">★★★★★</div>
           </div>
-          <p style="color:#021428;margin-top:12px">“BBC's practical labs and mocks got me promoted within months. Highly recommended.”</p>
         </div>
+        <p style="color:#021428;margin-top:12px">
+          “Their professional approach, timely site inspection, and clear
+          documentation made the valuation process smooth and reliable.”
+        </p>
+      </div>
 
-        <div class="testimonial">
-          <div style="display:flex;gap:12px;align-items:center">
-            <img src="https://via.placeholder.com/64" style="width:64px;height:64px;border-radius:50%;border:3px solid rgba(255,255,255,0.02)" alt="">
-            <div><div style="font-weight:800">Tilak Raj</div><div style="color:#ffb400">★★★★★</div></div>
+      <div class="testimonial">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://via.placeholder.com/64" style="width:64px;height:64px;border-radius:50%;border:3px solid rgba(255,255,255,0.02)" alt="">
+          <div>
+            <div style="font-weight:800">Individual Property Owner</div>
+            <div style="color:#ffb400">★★★★★</div>
           </div>
-          <p style="color:#021428;margin-top:12px">“Focused content, meaningful mock tests and helpful mentors.”</p>
         </div>
-
-        <div class="testimonial">
-          <div style="display:flex;gap:12px;align-items:center">
-            <img src="https://via.placeholder.com/64" style="width:64px;height:64px;border-radius:50%;border:3px solid rgba(255,255,255,0.02)" alt="">
-            <div><div style="font-weight:800">Nandita Ghosh</div><div style="color:#ffb400">★★★★★</div></div>
-          </div>
-          <p style="color:#021428;margin-top:12px">“Passed with top marks — BBC's mock test analytics helped a lot.”</p>
-        </div>
+        <p style="color:#021428;margin-top:12px">
+          “BBC explained the valuation process clearly and delivered the report
+          on time. Highly professional and trustworthy service.”
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <!-- FAQ SECTION -->
 <!-- FAQ SECTION -->
@@ -419,33 +489,34 @@ With a strong foundation in architectural design, civil engineering consultancy,
     <div class="faq-grid">
       <div class="faq-card"
            onclick="openFaqModal(
-             'What does BBC teach?',
-             'BBC provides promotion-focused courses, mock tests, certification preparation, and mentorship for working professionals.'
+             'Is the valuation report NRB compliant?',
+             'Yes. All valuation reports prepared by BBC Engineering Consultancy Pvt. Ltd. follow Nepal Rastra Bank (NRB) guidelines and are accepted by banks and financial institutions across Nepal.'
            )">
-        <h4>What does BBC teach?</h4>
+        <h4>Is the valuation report NRB compliant?</h4>
         <p>Tap to read answer</p>
       </div>
 
       <div class="faq-card"
            onclick="openFaqModal(
-             'How long are the courses?',
-             'Most BBC courses run for 6–12 weeks, including live sessions, recorded content, and mock assessments.'
+             'How long does the valuation process take?',
+             'The valuation process generally takes 2 to 5 working days, depending on property type, document availability, and site inspection requirements.'
            )">
-        <h4>How long are the courses?</h4>
+        <h4>How long does the valuation process take?</h4>
         <p>Tap to read answer</p>
       </div>
 
       <div class="faq-card"
            onclick="openFaqModal(
-             'Do you offer refunds?',
-             'Yes. We offer a 7-day refund policy on eligible courses. Please review the refund terms before enrollment.'
+             'Is site inspection mandatory for valuation?',
+             'Yes. Physical site inspection is mandatory to verify property details, construction status, location factors, and market conditions before issuing a valid valuation report.'
            )">
-        <h4>Do you offer refunds?</h4>
+        <h4>Is site inspection mandatory for valuation?</h4>
         <p>Tap to read answer</p>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- FAQ MODAL -->
 <div class="modal fade" id="faqModal" tabindex="-1">
@@ -677,7 +748,7 @@ With a strong foundation in architectural design, civil engineering consultancy,
   let activeCards = [...allCards];
 
   function cardsPerPage() {
-    return window.innerWidth <= 480 ? 3 : 6;
+    return window.innerWidth <= 480 ? 3 : 8;
   }
 
   function render() {
